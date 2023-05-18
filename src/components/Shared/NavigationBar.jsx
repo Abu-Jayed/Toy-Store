@@ -47,9 +47,9 @@ const NavigationBar = () => {
               <li>
                 <p>Home</p>
               </li>
-              <li>
+              <Link to='/alltoy' >
                 <p>All Toys</p>
-              </li>
+              </Link>
               <li>
                 <p>My Toy</p>
               </li>
@@ -77,7 +77,9 @@ const NavigationBar = () => {
               <p>Home</p>
             </li>
             <li>
+            <Link to='/alltoy'>
               <p>All Toys</p>
+            </Link>
             </li>
             <li>
               <p>My Toy</p>
