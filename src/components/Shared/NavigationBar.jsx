@@ -1,10 +1,23 @@
 import { Link } from "react-router-dom";
 import logo from "../../assets/Toy-Hero-Logo.jpeg";
+import { useContext, useState } from "react";
+import { AuthContext } from "../AuthProvider/AuthProvider";
+import { toast } from "react-hot-toast";
 
 const NavigationBar = () => {
-
-    const user = false
-
+  const [error, setError] = useState("");
+  const { user, logOut } = useContext(AuthContext);
+  const handleLogOut = () => {
+    logOut()
+      .then(() => {
+        return toast.success("User logout successfully");
+      })
+      .catch((err) => {
+        console.log(err.message);
+        setError(err.message);
+      });
+  };
+  console.log(error);
   return (
     <div>
       {/* navbar code from daisyui start */}
@@ -78,10 +91,15 @@ const NavigationBar = () => {
           </ul>
         </div>
         <div className="navbar-end">
-          
-          {
-            user ? <a className="btn btn-warning">user pic</a> : <Link to='/login' className="btn btn-warning">Login</ Link>
-          }
+          {user ? (
+            <Link onClick={handleLogOut} className="btn btn-info">
+            <button>Logout</button>
+          </Link>
+          ) : (
+            <Link to="/login" className="btn btn-warning">
+              Login
+            </Link>
+          )}
         </div>
       </div>
       {/* navbar code from daisyui end */}

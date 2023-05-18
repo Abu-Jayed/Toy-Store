@@ -1,13 +1,65 @@
-import { Link } from "react-router-dom";
+import { useContext, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { AuthContext } from "../../AuthProvider/AuthProvider";
+import { toast } from "react-hot-toast";
 
 const Register = () => {
+
+
+
+  const {createUser,updateUser} = useContext(AuthContext)
+  const [error,setError] = useState('')
+  const navagate = useNavigate();
+  // console.log(user);
+  const handleRegister = event =>{
+
+    event.preventDefault();
+    const form = event.target;
+    const name = form.name.value;
+    const imgUrl = form.img.value;
+    const email = form.email.value;
+    const password = form.password.value;
+    form.reset()
+    // console.log(name,imgUrl,email,password);
+
+    if(email == password){
+      return setError('email and password can not be same')
+    } else if(password.length < 6){
+      return setError('password must have 6 charectar')
+    }
+    // console.log('validation pass');
+
+    createUser(email,password)
+    .then(result =>{
+      const createdUser = result.user;
+      console.log(createdUser);
+      setError('')
+      toast.success('user created successfully.')
+
+      setTimeout(() => navagate('/'), 2000)
+
+      updateUser(name,imgUrl)
+      .then()
+      .catch(err => {
+        console.log(err);
+      })
+    }).catch(err => {
+      // console.log(err);
+      setError(err.message)
+    })
+  };
+
+
+
+
+
   return (
     <>
       <div className="text-black md:w-[666px] mx-auto rounded-3xl bg-orange-900 p-10 mb-14 mt-14">
         <h3 className="text-center text-cyan-300 text-3xl font-bold tracking-wide mb-5">
           Register to your account
         </h3>
-        <form className="w-96 mx-auto">
+        <form onSubmit={handleRegister} className="w-96 mx-auto" >
           <div className="form-control">
             <label className="label">
               <span className="text-gray-50 font-semibold tracking-wider">
@@ -88,6 +140,9 @@ const Register = () => {
             <button className="btn btn-warning">Register</button>
           </div>
         </form>
+        {
+          error
+        }
       </div>
     </>
   );
