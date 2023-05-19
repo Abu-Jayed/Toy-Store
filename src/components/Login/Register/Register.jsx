@@ -1,7 +1,7 @@
 import { useContext, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
-import { toast } from "react-hot-toast";
+import { Toaster, toast } from "react-hot-toast";
 
 const Register = () => {
 
@@ -19,33 +19,28 @@ const Register = () => {
     const imgUrl = form.img.value;
     const email = form.email.value;
     const password = form.password.value;
-    form.reset()
     // console.log(name,imgUrl,email,password);
 
-    if(email == password){
-      return setError('email and password can not be same')
-    } else if(password.length < 6){
+    if(password.length < 6){
+      toast.error("password must have 6 charectar")
       return setError('password must have 6 charectar')
     }
-    // console.log('validation pass');
 
     createUser(email,password)
     .then(result =>{
+      toast.success('user created successfully.')
       const createdUser = result.user;
       console.log(createdUser);
       setError('')
-      toast.success('user created successfully.')
-
+    form.reset()
       setTimeout(() => navagate('/'), 2000)
 
       updateUser(name,imgUrl)
-      .then()
-      .catch(err => {
-        console.log(err);
-      })
-    }).catch(err => {
-      // console.log(err);
-      setError(err.message)
+    })
+    .catch(err => {
+      // setError(err.message)
+      console.log(err.message);
+      toast.error(err.message)
     })
   };
 
@@ -140,10 +135,14 @@ const Register = () => {
             <button className="btn btn-warning">Register</button>
           </div>
         </form>
+        <h1 className="text-3xl text-center font-semibold uppercase text-red-600">
+
         {
           error
         }
+        </h1>
       </div>
+      <Toaster />
     </>
   );
 };

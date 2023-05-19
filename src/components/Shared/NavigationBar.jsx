@@ -46,20 +46,30 @@ const NavigationBar = () => {
               className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
             >
               <li>
-                <p>Home</p>
-              </li>
-              <Link to='/alltoy' >
-                <p>All Toys</p>
+              <Link to='/'>
+              <p>Home</p>
               </Link>
-              <li>
-                <p>My Toy</p>
-              </li>
-              <li>
-                <p>Add A Toy</p>
-              </li>
-              <li>
-                <p>Blog</p>
-              </li>
+            </li>
+            <li>
+            <Link to='/alltoy/20'>
+              <p>All Toys</p>
+            </Link>
+            </li>
+            <li>
+              <Link to='/myToys'>
+              <p>My Toy</p>
+              </Link>
+            </li>
+            <li>
+              <Link to='/addJob'>
+              <p>Add A Toy</p>
+              </Link>
+            </li>
+            <li>
+              <Link to='/blog'>
+              <p>Blog</p>
+              </Link>
+            </li>
             </ul>
           </div>
           <Link
@@ -102,10 +112,16 @@ const NavigationBar = () => {
           </ul>
         </div>
         <div className="navbar-end">
+          {
+            user ? <img title={user?.displayName} className="w-14 rounded-full" src={user?.photoURL} alt="" /> : ''
+          }
           {user ? (
+            <>
+            &nbsp;
             <Link onClick={handleLogOut} className="btn btn-info">
             <button>Logout</button>
           </Link>
+            </>
           ) : (
             <Link to="/login" className="btn btn-warning">
               Login

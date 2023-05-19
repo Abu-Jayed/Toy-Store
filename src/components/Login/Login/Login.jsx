@@ -74,26 +74,6 @@ const Login = () => {
       });
   };
 
-  /* sign in with git hub */
-
-  const handleGithubLogin = () => {
-    const gitProvider = new GithubAuthProvider();
-    signInWithPopup(auth, gitProvider)
-      .then((result) => {
-        // console.log(result.user);
-        const user = result.user;
-        console.log(user);
-        setError("");
-        toast.success("login in with github successfull");
-        navigate(from)
-      })
-      .catch((err) => {
-        // console.log(err.message);
-        setError(err.message);
-      });
-  };
-
-
 
 
   return (
@@ -105,9 +85,6 @@ const Login = () => {
         <div className="flex justify-around gap-1">
           <button onClick={handleGoogleLogin} className=" btn btn-outline btn-success">
             <FaGoogle className="w-10 h-10"></FaGoogle>Login with google
-          </button>
-          <button onClick={handleGithubLogin} className="btn btn-outline btn-warning">
-            <FaGithub className="w-10 h-10"></FaGithub>Login with github
           </button>
         </div>
         <form onSubmit={handleLogin} className="w-96 mx-auto">

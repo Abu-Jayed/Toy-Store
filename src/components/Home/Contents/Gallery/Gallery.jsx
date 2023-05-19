@@ -1,25 +1,136 @@
+import { GrStar } from "react-icons/gr";
+import { BsStar, BsStarFill, BsStarHalf } from "react-icons/bs";
 
 const Gallery = () => {
     return (
-        <div className="grid grid-cols-2 md:grid-cols-3 mx-auto md:my-10 gap-10">
+        <div className="grid grid-cols-2 md:grid-cols-3 max-w-[1100px] mx-auto md:my-10 gap-10">
             <div className="shadow-md hover:shadow-md hover:shadow-black shadow-gray-600">
-                <img className="mx-auto w-48" src="https://res.cloudinary.com/mattel-dtc-cloud/image/upload/w_540,h_540,c_pad/shop-us-prod/products/hubxu3gknhcaqdwmgofu.jpg?v=1682546472" alt="" />
+                <img className="mx-auto w-48" src="https://slimages.macys.com/is/image/MCY/products/0/optimized/22528380_fpx.tif" alt="" />
+                <a href="" className="p-5 text-blue-400 font-bold">Gund P Lushes April Flore Plus</a>
+                <p className="font-bold text-xl px-5 pt-2">$15.99</p>
+                <div className="items-center px-4 flex mb-4 text-2xl text-orange-600">
+                <BsStarFill></BsStarFill>
+                <BsStarFill></BsStarFill>   
+                <BsStarFill></BsStarFill>
+                <BsStarFill></BsStarFill>
+                <BsStarHalf></BsStarHalf>
+                <p>4.6 <span className="text-violet-500"> (64)</span></p>
+                <button className="text-lg md:ml-5 font-bold p-1 rounded-xl bg-warning">Buy Now</button>
+                </div>
             </div>
             <div className="shadow-md hover:shadow-md hover:shadow-black shadow-gray-600">
-                <img className="mx-auto w-48" src="https://res.cloudinary.com/mattel-dtc-cloud/image/upload/w_720,h_720,c_pad/shop-us-prod/products/hyaonw0lvrsxa6dmf7gz_11148ed3-af67-48d0-9488-a88c6b2dc226.jpg?v=1663304168" alt="" />
+                <img className="mx-auto w-48" src="https://slimages.macys.com/is/image/MCY/products/0/optimized/22470285_fpx.tif" alt="" />
+                <a href="" className="p-5 text-blue-400 font-bold">Ridly Jones | collectively Pluse-Ridly</a>
+                <p className="font-bold text-xl px-5 pt-2">$8.99</p>
+                <div className="items-center px-4 flex mb-4 text-2xl text-orange-600">
+                <BsStarFill></BsStarFill>
+                <BsStarFill></BsStarFill>   
+                <BsStarFill></BsStarFill>
+                <BsStarFill></BsStarFill>
+                <BsStarHalf></BsStarHalf>
+                <p>4.7 <span className="text-violet-500"> (84)</span></p>
+                <button className="text-lg md:ml-5 font-bold p-1 rounded-xl bg-warning">Buy Now</button>
+                </div>
             </div>
             <div className="shadow-md hover:shadow-md hover:shadow-black shadow-gray-600">
-                <img className="mx-auto w-48" src="https://res.cloudinary.com/mattel-dtc-cloud/image/upload/w_900,h_900,c_pad/shop-us-prod/products/wqbcdc3fcajed5phc41a_f4d138e1-bd16-45b3-98c7-5400cdc134f2.jpg?v=1674778964" alt="" />
+                <img className="mx-auto w-48" src="https://slimages.macys.com/is/image/MCY/products/0/optimized/21920267_fpx.tif" alt="" />
+                <a href="" className="p-5 text-blue-400 font-bold">Disney Pride Minnie Large Plush</a>
+                <p className="font-bold text-xl px-5 pt-2">$13.99</p>
+                <div className="items-center px-4 flex mb-4 text-2xl text-orange-600">
+                <BsStarFill></BsStarFill>
+                <BsStarFill></BsStarFill>
+                <BsStarFill></BsStarFill>
+                <BsStarFill></BsStarFill>
+                <BsStarFill></BsStarFill>
+                <p>5.0 <span className="text-violet-500"> (15)</span></p>
+                <button className="text-lg md:ml-5 font-bold p-1 rounded-xl bg-warning">Buy Now</button>
+                </div>
             </div>
             <div className="shadow-md hover:shadow-md hover:shadow-black shadow-gray-600">
-                <img className="mx-auto w-48" src="https://res.cloudinary.com/mattel-dtc-cloud/image/upload/w_900,h_900,c_pad/shop-us-prod/products/dh0gb1qwqtmruafpwp5b_25e6803b-4a95-4746-9cca-a5fc880de3a6.jpg?v=1679014410" alt="" />
+                <img className="mx-auto w-48" src="https://slimages.macys.com/is/image/MCY/products/0/optimized/22528385_fpx.tif" alt="" />
+                <a href="" className="p-5 text-blue-400 font-bold">Gund® P' Lushes Alaska Howell Plush</a>
+                <p className="font-bold text-xl px-5 pt-2">$23.99</p>
+                <div className="items-center px-4 flex mb-4 text-2xl text-orange-600">
+                <BsStarFill></BsStarFill>
+                <BsStarFill></BsStarFill>
+                <BsStarFill></BsStarFill>
+                <BsStarFill></BsStarFill>
+                <BsStarFill></BsStarFill>
+                <p>5.0 <span className="text-violet-500"> (35)</span></p>
+                <button className="text-lg md:ml-5 font-bold p-1 rounded-xl bg-warning">Buy Now</button>
+                </div>
             </div>
             <div className="shadow-md hover:shadow-md hover:shadow-black shadow-gray-600">
-                <img className="mx-auto w-48" src="https://res.cloudinary.com/mattel-dtc-cloud/image/upload/w_540,h_540,c_pad/shop-us-prod/products/guhumaljzr64vxupbymr_0c285230-aa90-4a70-913d-0de0acb44837.jpg?v=1677267420" alt="" />
+                <img className="mx-auto w-48" src="https://slimages.macys.com/is/image/MCY/products/0/optimized/23900520_fpx.tif" alt="" />
+                <a href="" className="p-5 text-blue-400 font-bold">Geoffreys Toy Box 10" Tasties Egg </a>
+                <p className="font-bold text-xl px-5 pt-2">$12.99</p>
+                <div className="items-center px-4 flex mb-4 text-2xl text-orange-600">
+                <BsStarFill></BsStarFill>
+                <BsStarFill></BsStarFill>
+                <BsStarFill></BsStarFill>
+                <BsStarFill></BsStarFill>
+                <BsStarHalf></BsStarHalf>
+                <p>4.8 <span className="text-violet-500"> (52)</span></p>
+                <button className="text-lg md:ml-5 font-bold p-1 rounded-xl bg-warning">Buy Now</button>
+                </div>
             </div>
             <div className="shadow-md hover:shadow-md hover:shadow-black shadow-gray-600">
-                <img className="mx-auto w-48" src="https://res.cloudinary.com/mattel-dtc-cloud/image/upload/w_720,h_720,c_pad/shop-us-prod/products/hyaonw0lvrsxa6dmf7gz_11148ed3-af67-48d0-9488-a88c6b2dc226.jpg?v=1663304168" alt="" />
+                <img className="mx-auto w-48" src="https://slimages.macys.com/is/image/MCY/products/0/optimized/24087607_fpx.tif" alt="" />
+                <a href="" className="p-5 text-blue-400 font-bold">Geoffreys Toy Box 10" Avocado Bunny </a>
+                <p className="font-bold text-xl px-5 pt-2">$17.99</p>
+                <div className="items-center px-4 flex mb-4 text-2xl text-orange-600">
+                <BsStarFill></BsStarFill>
+                <BsStarFill></BsStarFill>
+                <BsStarFill></BsStarFill>
+                <BsStarFill></BsStarFill>
+                <BsStarHalf></BsStarHalf>
+                <p>4.7 <span className="text-violet-500"> (71)</span></p>
+                <button className="text-lg md:ml-5 font-bold p-1 rounded-xl bg-warning">Buy Now</button>
+                </div>
             </div>
+            <div className="shadow-md hover:shadow-md hover:shadow-black shadow-gray-600">
+                <img className="mx-auto w-48" src="https://slimages.macys.com/is/image/MCY/products/0/optimized/14524987_fpx.tif" alt="" />
+                <a href="" className="p-5 text-blue-400 font-bold">CLOSEOUT! Gund Sesame Street Bird</a>
+                <p className="font-bold text-xl px-5 pt-2">$35.99</p>
+                <div className="items-center px-4 flex mb-4 text-2xl text-orange-600">
+                <BsStarFill></BsStarFill>
+                <BsStarFill></BsStarFill>
+                <BsStarFill></BsStarFill>
+                <BsStarFill></BsStarFill>
+                <BsStarFill></BsStarFill>
+                <p>5.0 <span className="text-violet-500"> (19)</span></p>
+                <button className="text-lg md:ml-5 font-bold p-1 rounded-xl bg-warning">Buy Now</button>
+                </div>
+            </div>
+            <div className="shadow-md hover:shadow-md hover:shadow-black shadow-gray-600">
+                <img className="mx-auto w-48" src="https://slimages.macys.com/is/image/MCY/products/0/optimized/24087616_fpx.tif" alt="" />
+                <a href="" className="p-5 text-blue-400 font-bold">Geoffrey's Toy Box 10" Donut Bunny</a>
+                <p className="font-bold text-xl px-5 pt-2">$41.99</p>
+                <div className="items-center px-4 flex mb-4 text-2xl text-orange-600">
+                <BsStarFill></BsStarFill>
+                <BsStarFill></BsStarFill>
+                <BsStarFill></BsStarFill>
+                <BsStarFill></BsStarFill>
+                <BsStarHalf></BsStarHalf>
+                <p>4.5 <span className="text-violet-500"> (56)</span></p>
+                <button className="text-lg md:ml-5 font-bold p-1 rounded-xl bg-warning">Buy Now</button>
+                </div>
+            </div>
+            <div className="shadow-md hover:shadow-md hover:shadow-black shadow-gray-600">
+                <img className="mx-auto w-48" src="https://slimages.macys.com/is/image/MCY/products/0/optimized/22806950_fpx.tif" alt="" />
+                <a href="" className="p-5 text-blue-400 font-bold">V-Friend Collectible Peacock Pluse</a>
+                <p className="font-bold text-xl px-5 pt-2">$37.99</p>
+                <div className="items-center px-4 flex mb-4 text-2xl text-orange-600">
+                <BsStarFill></BsStarFill>
+                <BsStarFill></BsStarFill>
+                <BsStarFill></BsStarFill>
+                <BsStarFill></BsStarFill>
+                <BsStarFill></BsStarFill>
+                <p>5.0 <span className="text-violet-500"> (67)</span></p>
+                <button className="text-lg md:ml-5 font-bold p-1 rounded-xl bg-warning">Buy Now</button>
+                </div>
+            </div>
+            
         </div>
     );
 };

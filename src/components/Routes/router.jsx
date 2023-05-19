@@ -8,15 +8,19 @@ import Details from "../Details/Details";
 import AddJob from "../addJob/addJob";
 import MyToys from "../MyToys/MyToys";
 import UpdateToy from "../UpdateToy/UpdateToy";
+import Blog from "../Blog/Blog";
+import ErrorPage from "../Shared/ErrorPage";
+import PrivetRoute from "./PrivetRoute";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Layout></Layout>,
+    errorElement: <ErrorPage></ErrorPage>,
     children: [
         {
             path: '/',
-            element: <Home></Home>
+            element: <Home></Home>,
         },
         {
             path:  'login',
@@ -38,17 +42,21 @@ const router = createBrowserRouter([
         },
         {
             path: 'addJob',
-            element: <AddJob></AddJob>
+            element: <PrivetRoute><AddJob></AddJob></PrivetRoute>
         },
         {
             path: 'myToys',
-            element: <MyToys></MyToys>
+            element: <PrivetRoute><MyToys></MyToys></PrivetRoute>
         },
         {
             path: '/edit/:id',
             element: <UpdateToy></UpdateToy>,
             loader: ({params}) => fetch(`http://localhost:5000/details/${params.id}`)
         },
+        {
+            path: 'blog',
+            element: <Blog></Blog>
+        }
     ]
   },
 ]);
