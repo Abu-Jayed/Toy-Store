@@ -6,6 +6,8 @@ import Register from "../Login/Register/Register";
 import AllToy from "../AllToy/AllToy";
 import Details from "../Details/Details";
 import AddJob from "../addJob/addJob";
+import MyToys from "../MyToys/MyToys";
+import UpdateToy from "../UpdateToy/UpdateToy";
 
 const router = createBrowserRouter([
   {
@@ -37,7 +39,16 @@ const router = createBrowserRouter([
         {
             path: 'addJob',
             element: <AddJob></AddJob>
-        }
+        },
+        {
+            path: 'myToys',
+            element: <MyToys></MyToys>
+        },
+        {
+            path: '/edit/:id',
+            element: <UpdateToy></UpdateToy>,
+            loader: ({params}) => fetch(`http://localhost:5000/details/${params.id}`)
+        },
     ]
   },
 ]);

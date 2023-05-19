@@ -1,8 +1,9 @@
 import { Link } from "react-router-dom";
 import logo from "../../assets/Toy-Hero-Logo.jpeg";
 import { useContext, useState } from "react";
-import { AuthContext } from "../AuthProvider/AuthProvider";
 import { toast } from "react-hot-toast";
+import { AuthContext } from "../AuthProvider/AuthProvider";
+
 
 const NavigationBar = () => {
   const [error, setError] = useState("");
@@ -84,7 +85,9 @@ const NavigationBar = () => {
             </Link>
             </li>
             <li>
+              <Link to='/myToys'>
               <p>My Toy</p>
+              </Link>
             </li>
             <li>
               <Link to='/addJob'>
@@ -92,7 +95,9 @@ const NavigationBar = () => {
               </Link>
             </li>
             <li>
+              <Link to='/blog'>
               <p>Blog</p>
+              </Link>
             </li>
           </ul>
         </div>
