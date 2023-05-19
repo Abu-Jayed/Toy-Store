@@ -74,10 +74,12 @@ const NavigationBar = () => {
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
             <li>
+              <Link to='/'>
               <p>Home</p>
+              </Link>
             </li>
             <li>
-            <Link to='/alltoy'>
+            <Link to='/alltoy/20'>
               <p>All Toys</p>
             </Link>
             </li>
@@ -85,7 +87,9 @@ const NavigationBar = () => {
               <p>My Toy</p>
             </li>
             <li>
+              <Link to='/addJob'>
               <p>Add A Toy</p>
+              </Link>
             </li>
             <li>
               <p>Blog</p>
