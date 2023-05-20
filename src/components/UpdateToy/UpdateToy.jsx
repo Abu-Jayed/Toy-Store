@@ -1,6 +1,7 @@
 import { useForm } from "react-hook-form";
 import { useLoaderData } from "react-router-dom";
 import useTitle from "../Shared/hook/useTitle";
+import Swal from "sweetalert2";
 
 const UpdateToy = (props) => {
   useTitle('Update Toy')
@@ -12,7 +13,6 @@ const UpdateToy = (props) => {
   const {
     register,
     handleSubmit,
-    watch,
     formState: { errors },
   } = useForm();
 
@@ -25,11 +25,18 @@ const UpdateToy = (props) => {
     fetch(`https://toy-hero-server.vercel.app/updateToy/${id[0]._id}`, {
       method: "PUT",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(data),
+      body: JSON.stringify(data)
     })
       .then((res) => res.json())
       .then((result) => {
         console.log(result);
+        Swal.fire({
+          position: 'top-center',
+          icon: 'success',
+          title: 'Your toy data updated successfully.',
+          showConfirmButton: false,
+          timer: 1500
+        })
       });
     console.log('data from onsubmit', data);
     console.log('id from onSubmit',id[0]._id);

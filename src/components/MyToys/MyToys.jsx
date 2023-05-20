@@ -9,6 +9,8 @@ import { AuthContext } from "../AuthProvider/AuthProvider";
 import UpdateToy from "../UpdateToy/UpdateToy";
 import { Link } from "react-router-dom";
 import useTitle from "../Shared/hook/useTitle";
+import { Toaster, toast } from "react-hot-toast";
+import Swal from "sweetalert2";
 
 const MyToys = () => {
   useTitle('My Toys')
@@ -37,8 +39,26 @@ const MyToys = () => {
 
   /* delete code start here */
   const handleDelete = (id) => {
-    const proceed = confirm("Are You sure you want to delete");
-    if (proceed) {
+
+    /* swal confirmation start */
+
+    Swal.fire({
+      title: 'Are you sure?',
+      text: "You won't be able to revert this!",
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Yes, delete it!'
+    }).then((result) => {
+      if (result.isConfirmed) {
+        Swal.fire(
+          'Deleted!',
+          'Your file has been deleted.',
+          'success'
+        )
+
+
         fetch(`https://toy-hero-server.vercel.app/toys/${id}`, {
             method: 'DELETE'
         })
@@ -46,13 +66,27 @@ const MyToys = () => {
             .then(data => {
                 console.log(data);
                 if (data.deletedCount > 0) {
-                    alert('deleted successful');
+                  toast.success('Toy deleted successfully')
                     const remaining = toys.filter(toy => toy._id !== id);
                     setToys(remaining);
                 }
             })
-    }
-    console.log(id);
+      }else{
+        Swal.fire({
+          position: 'top-center',
+          icon: 'warning',
+          title: 'Your toy is not deleted yet!',
+          showConfirmButton: false,
+          timer: 1500
+        })
+      }
+    })
+
+    /* swal confirmation end */
+
+
+
+
   };
   /* delete code end here */
 
@@ -111,6 +145,7 @@ const MyToys = () => {
           </tbody>
         </table>
       </div>
+      <Toaster></Toaster>
     </div>
   );
 };

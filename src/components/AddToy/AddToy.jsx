@@ -3,6 +3,8 @@ import React, { useContext, useState } from "react";
 import { useForm } from "react-hook-form";
 import { AuthContext } from "../AuthProvider/AuthProvider";
 import useTitle from "../Shared/hook/useTitle";
+import {  Toaster, toast } from "react-hot-toast";
+import Swal from "sweetalert2";
 
 const AddToy = () => {
   useTitle('Add Toy')
@@ -25,6 +27,14 @@ const AddToy = () => {
     })
       .then((res) => res.json())
       .then((result) => {
+        // toast.success('Toy added successfully')
+        Swal.fire({
+          position: 'top-center',
+          icon: 'success',
+          title: 'Your toy added successfully',
+          showConfirmButton: false,
+          timer: 1500
+        })
         console.log(result);
       });
     console.log(data);
@@ -99,13 +109,6 @@ const AddToy = () => {
               placeholder="your email"
               type="email"
             />
-            {/* <CreatableSelect
-              className="w-60"
-              defaultValue={selectedOption}
-              onChange={setSelectedOption}
-              options={options}
-              isMulti
-            /> */}
 
             <input
               {...register("description")}
@@ -114,10 +117,11 @@ const AddToy = () => {
               className="input input-bordered input-primary w-full max-w-xs"
             />
 
-            <input className="btn btn-warning" value="Post Job" type="submit" />
+            <input className="btn btn-warning" value="Add Toy" type="submit" />
           </form>
         </div>
       </div>
+      <Toaster></Toaster>
     </div>
   );
 };
