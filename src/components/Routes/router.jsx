@@ -33,12 +33,12 @@ const router = createBrowserRouter([
         {
             path: '/alltoy/:limit',
             element: <AllToy></AllToy>,
-            loader: ({params})=> fetch(`http://localhost:5000/allToy/${params.limit}`),
+            loader: ({params})=> fetch(`https://toy-hero-server.vercel.app/allToy/${params.limit}`),
         },
         {
             path: '/details/:id',
             element: <PrivetRoute><Details></Details></PrivetRoute> ,
-            loader: ({params}) => fetch(`http://localhost:5000/details/${params.id}`)
+            loader: ({params}) => fetch(`https://toy-hero-server.vercel.app/details/${params.id}`)
         },
         {
             path: 'addToy',
@@ -51,7 +51,7 @@ const router = createBrowserRouter([
         {
             path: '/edit/:id',
             element: <UpdateToy></UpdateToy>,
-            loader: ({params}) => fetch(`http://localhost:5000/details/${params.id}`)
+            loader: ({params}) => fetch(`https://toy-hero-server.vercel.app/details/${params.id}`)
         },
         {
             path: 'blog',

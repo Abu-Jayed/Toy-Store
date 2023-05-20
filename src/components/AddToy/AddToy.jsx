@@ -18,7 +18,7 @@ const AddToy = () => {
   const onSubmit = (data) => {
     data.skills = selectedOption;
 
-    fetch("http://localhost:5000/addToy", {
+    fetch("https://toy-hero-server.vercel.app/addToy", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(data),

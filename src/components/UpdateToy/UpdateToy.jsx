@@ -22,7 +22,7 @@ const UpdateToy = (props) => {
   
   const onSubmit = (data) => {
 
-    fetch(`http://localhost:5000/updateToy/${id[0]._id}`, {
+    fetch(`https://toy-hero-server.vercel.app/updateToy/${id[0]._id}`, {
       method: "PUT",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(data),

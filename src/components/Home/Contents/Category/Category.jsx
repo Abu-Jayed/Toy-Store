@@ -14,7 +14,7 @@ const Category = () => {
   const navigate = useNavigate()
 
   const handleCheck = (type) => {
-    fetch(`http://localhost:5000/allToy/Marvel/${type}`)
+    fetch(`https://toy-hero-server.vercel.app/allToy/Marvel/${type}`)
       .then((res) => res.json())
       .then((data) => {
         console.log("IT is working", data);
@@ -26,7 +26,7 @@ const Category = () => {
 
   /* DC Charector */
   const handleDCCharector = (type) => {
-    fetch(`http://localhost:5000/allToy/DC/${type}`)
+    fetch(`https://toy-hero-server.vercel.app/allToy/DC/${type}`)
       .then((res) => res.json())
       .then((data) => {
         console.log("IT is working", data);
@@ -37,7 +37,7 @@ const Category = () => {
 
   /* DC Charector */
   const handleHarryCharector = (type) => {
-    fetch(`http://localhost:5000/allToy/Harry/${type}`)
+    fetch(`https://toy-hero-server.vercel.app/allToy/Harry/${type}`)
       .then((res) => res.json())
       .then((data) => {
         console.log("IT is working", data);
