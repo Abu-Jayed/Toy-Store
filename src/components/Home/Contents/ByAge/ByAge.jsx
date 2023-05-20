@@ -12,7 +12,7 @@ import toy6 from "../../../../assets/img/toy6.png";
 
 const ByAge = () => {
   return (
-    <div className="border-4 rounded-[30px] md:mt-32 mt-8 md:relative">
+    <div data-aos="fade-left" className="border-4 rounded-[30px] md:mt-32 mt-8 md:relative">
         <p className="text-3xl font-bold md:absolute md:left-32 -top-5 bg-white px-3 italic">shop by age</p>
       <div className=" py-10 rounded-3xl  md:flex md:gap-5 justify-center">
         <div className="bg-pink-300  w-48 h-60 rounded-xl flex justify-center ">

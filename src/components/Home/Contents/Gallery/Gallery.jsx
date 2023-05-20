@@ -3,7 +3,7 @@ import { BsStar, BsStarFill, BsStarHalf } from "react-icons/bs";
 
 const Gallery = () => {
     return (
-        <div className="grid grid-cols-2 md:grid-cols-3 max-w-[1100px] mx-auto md:my-10 gap-10">
+        <div data-aos="fade-up" className="grid grid-cols-2 md:grid-cols-3 max-w-[1100px] mx-auto md:my-10 gap-10">
             <div className="shadow-md hover:shadow-md hover:shadow-black shadow-gray-600">
                 <img className="mx-auto w-48" src="https://slimages.macys.com/is/image/MCY/products/0/optimized/22528380_fpx.tif" alt="" />
                 <a href="" className="p-5 text-blue-400 font-bold">Gund P Lushes April Flore Plus</a>

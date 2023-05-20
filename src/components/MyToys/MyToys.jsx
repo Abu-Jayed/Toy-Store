@@ -14,16 +14,25 @@ const MyToys = () => {
   const { user } = useContext(AuthContext);
   const [jobs, setJobs] = useState([]);
   const [searchText, setSearchText] = useState("");
-  const [modalShow, setModalShow] = React.useState(false);
+  
+  const [grow,setGrow] = useState('yes')
+  const handleGrow =(agree)=>{
+    if(agree == true){
+      setGrow('yes')
+    }else{
+      setGrow('no')
+    }
+    console.log(grow);
+  }
 
   useEffect(() => {
-    fetch(`http://localhost:5000/myJobs/${user?.email}`)
+    fetch(`http://localhost:5000/myJobs/${user?.email}?grow=${grow}`)
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
         setJobs(data);
       });
-  }, [user]);
+  }, [grow]);
 
   /* delete code start here */
   const handleDelete = (id) => {
@@ -55,7 +64,10 @@ const MyToys = () => {
             onChange={(e) => setSearchText(e.target.value)}
             type="text"
             className="p-1"
+            
           />{" "}
+          <button className="btn btn-warning" onClick={()=>handleGrow(true)}>Decrese</button>
+          <button className="btn btn-info" onClick={()=>handleGrow(false)}>Acces</button>
         </div>
         <table className="container">
           <thead>
