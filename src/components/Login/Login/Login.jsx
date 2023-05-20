@@ -43,6 +43,7 @@ const Login = () => {
           else{
               navigate('/')
               // console.log(user);
+              console.log("inside navigate home",from);
           }
       },2000)
       

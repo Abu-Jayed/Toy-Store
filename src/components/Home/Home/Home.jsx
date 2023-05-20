@@ -3,6 +3,7 @@ import Category from "../Contents/Category/Category";
 import Discount from "../Contents/Discount.jsx/Discount";
 import Gallery from "../Contents/Gallery/Gallery";
 import Slider from "../Contents/Slider/Slider";
+import ByAge from "../Contents/ByAge/ByAge";
 
 const Home = () => {
     return (
@@ -12,6 +13,7 @@ const Home = () => {
             <Slider></Slider>
             <Gallery></Gallery>
             <Category></Category>
+            <ByAge></ByAge>
         </div>
     );
 };
