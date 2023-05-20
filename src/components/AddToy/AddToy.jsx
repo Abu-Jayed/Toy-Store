@@ -1,11 +1,11 @@
 /* eslint-disable no-unused-vars */
 import React, { useContext, useState } from "react";
 import { useForm } from "react-hook-form";
-import "./AddJob.css";
-import CreatableSelect from "react-select/creatable";
 import { AuthContext } from "../AuthProvider/AuthProvider";
+import useTitle from "../Shared/hook/useTitle";
 
-const AddJob = () => {
+const AddToy = () => {
+  useTitle('Add Toy')
   const { user } = useContext(AuthContext);
   const [selectedOption, setSelectedOption] = useState(null);
 
@@ -18,7 +18,7 @@ const AddJob = () => {
   const onSubmit = (data) => {
     data.skills = selectedOption;
 
-    fetch("http://localhost:5000/post-job", {
+    fetch("http://localhost:5000/addToy", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(data),
@@ -29,16 +29,16 @@ const AddJob = () => {
       });
     console.log(data);
   };
-  const options = [
-    { value: "JavaScript", label: "JavaScript" },
-    { value: "C++", label: "C++" },
-    { value: "HTML", label: "HTML" },
-    { value: "CSS", label: "CSS" },
-    { value: "React", label: "React" },
-    { value: "Node", label: "Node" },
-    { value: "MongoDB", label: "MongoDB" },
-    { value: "Redux", label: "Redux" },
-  ];
+  // const options = [
+  //   { value: "JavaScript", label: "JavaScript" },
+  //   { value: "C++", label: "C++" },
+  //   { value: "HTML", label: "HTML" },
+  //   { value: "CSS", label: "CSS" },
+  //   { value: "React", label: "React" },
+  //   { value: "Node", label: "Node" },
+  //   { value: "MongoDB", label: "MongoDB" },
+  //   { value: "Redux", label: "Redux" },
+  // ];
   //   console.log(user);
   return (
     <div className="border-4 border-red-600">
@@ -122,4 +122,4 @@ const AddJob = () => {
   );
 };
 
-export default AddJob;
+export default AddToy;

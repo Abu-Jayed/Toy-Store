@@ -1,6 +1,6 @@
 const Slider = () => {
   return (
-    <div data-aos="fade-left">
+    <div data-aos="fade-down">
       <div className="carousel w-full md:mt-10 ">
         {/* slider 1 */}
         <div id="slider11" className="carousel-item relative w-full">

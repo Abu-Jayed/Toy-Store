@@ -1,7 +1,9 @@
 import { useForm } from "react-hook-form";
 import { useLoaderData } from "react-router-dom";
+import useTitle from "../Shared/hook/useTitle";
 
 const UpdateToy = (props) => {
+  useTitle('Update Toy')
     const data = useLoaderData()
     console.log(data);
     // console.log('id',data[0]._id);
@@ -20,7 +22,7 @@ const UpdateToy = (props) => {
   
   const onSubmit = (data) => {
 
-    fetch(`http://localhost:5000/updateJob/${id[0]._id}`, {
+    fetch(`http://localhost:5000/updateToy/${id[0]._id}`, {
       method: "PUT",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(data),
@@ -35,14 +37,6 @@ const UpdateToy = (props) => {
 
 
 
-//   const handleJobUpdate = (data) => {
-//     console.log(data);
-//     fetch(`http://localhost:5000/updateJob/${data}`, {
-//         method: "PUT",
-//         headers: { "Content-Type": "application/json" },
-//         body: JSON.stringify(data),
-//       })}
-      /* update toy end */
 
   return (
     <div>
@@ -77,14 +71,14 @@ const UpdateToy = (props) => {
               {...register("rating")}
               type="text"
               placeholder="rating"
-              defaultValue={props?.job?.rating}
+              defaultValue={props?.toy?.rating}
               className="input input-bordered input-primary w-full max-w-xs"
             />
             <input
               {...register("available_quantity")}
               type="text"
               placeholder="Quantity"
-              defaultValue={props?.job?.available_quantity}
+              defaultValue={props?.toy?.available_quantity}
               className="input input-bordered input-primary w-full max-w-xs"
             />
 
@@ -110,7 +104,7 @@ const UpdateToy = (props) => {
               className="input"
               {...register("postedBy")}
             //   placeholder="your email"
-              defaultValue={props?.job?.postedBy}
+              defaultValue={props?.toy?.postedBy}
               type="email"
             />
             

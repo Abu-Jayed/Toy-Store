@@ -5,12 +5,12 @@ import Login from "../Login/Login/Login";
 import Register from "../Login/Register/Register";
 import AllToy from "../AllToy/AllToy";
 import Details from "../Details/Details";
-import AddJob from "../addJob/addJob";
 import MyToys from "../MyToys/MyToys";
 import UpdateToy from "../UpdateToy/UpdateToy";
 import Blog from "../Blog/Blog";
 import ErrorPage from "../Shared/ErrorPage";
 import PrivetRoute from "./PrivetRoute";
+import AddToy from "../AddToy/AddToy";
 
 const router = createBrowserRouter([
   {
@@ -41,8 +41,8 @@ const router = createBrowserRouter([
             loader: ({params}) => fetch(`http://localhost:5000/details/${params.id}`)
         },
         {
-            path: 'addJob',
-            element: <PrivetRoute><AddJob></AddJob></PrivetRoute>
+            path: 'addToy',
+            element: <PrivetRoute><AddToy></AddToy></PrivetRoute>
         },
         {
             path: 'myToys',

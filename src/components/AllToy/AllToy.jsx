@@ -1,14 +1,16 @@
 import { useState } from "react";
 import { Link, useLoaderData } from "react-router-dom";
+import useTitle from "../Shared/hook/useTitle";
 
 const AllToy = () => {
+  useTitle('All Toy')
   const data = useLoaderData()
   console.log(data);
   const [toys,setToys] = useState(data)
   const [searchText,setSearchText] = useState('')
 
   const handleSearch = () => {
-    fetch(`http://localhost:5000/getJobsByText/${searchText}`)
+    fetch(`http://localhost:5000/getToyByName/${searchText}`)
       .then((res) => res.json())
       .then((data) => {
         console.log(data);

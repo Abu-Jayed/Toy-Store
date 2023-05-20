@@ -1,4 +1,7 @@
+import useTitle from "../Shared/hook/useTitle";
+
 const Blog = () => {
+  useTitle('Blog')
   return (
     <div>
       <div className="mt-20 shadow-md shadow-black rounded-xl">

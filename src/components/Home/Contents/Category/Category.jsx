@@ -66,7 +66,7 @@ const Category = () => {
   }
 
   return (
-    <div data-aos="fade-right">
+    <div data-aos="fade-up">
       <Tabs>
         <TabList onClick={handleSolveIssue}>
           <Tab>Marvel</Tab>

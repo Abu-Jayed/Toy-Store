@@ -14,7 +14,7 @@ const ByCategory = () => {
     const [show,setShow] = useState(false)
 
   return (
-    <div data-aos="fade-right">
+    <div data-aos="fade-up">
       <div className={ `  border-4 rounded-[30px] md:mt-32 mt-8 md:relative`}>
         <p className="text-3xl font-bold md:absolute md:left-32 -top-5 bg-white px-3 italic">
           shop by category

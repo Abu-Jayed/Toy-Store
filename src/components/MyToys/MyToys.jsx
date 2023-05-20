@@ -4,15 +4,16 @@ import React from "react";
 import { useContext } from "react";
 import { useState } from "react";
 import { useEffect } from "react";
-// import "./MyJobs.css";
-// import UpdateJobModal from "../UpdateJobModal/UpdateJobModal";
+
 import { AuthContext } from "../AuthProvider/AuthProvider";
 import UpdateToy from "../UpdateToy/UpdateToy";
 import { Link } from "react-router-dom";
+import useTitle from "../Shared/hook/useTitle";
 
 const MyToys = () => {
+  useTitle('My Toys')
   const { user } = useContext(AuthContext);
-  const [jobs, setJobs] = useState([]);
+  const [toys, setToys] = useState([]);
   const [searchText, setSearchText] = useState("");
   
   const [grow,setGrow] = useState('yes')
@@ -26,11 +27,11 @@ const MyToys = () => {
   }
 
   useEffect(() => {
-    fetch(`http://localhost:5000/myJobs/${user?.email}?grow=${grow}`)
+    fetch(`http://localhost:5000/myToys/${user?.email}?grow=${grow}`)
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
-        setJobs(data);
+        setToys(data);
       });
   }, [grow]);
 
@@ -46,8 +47,8 @@ const MyToys = () => {
                 console.log(data);
                 if (data.deletedCount > 0) {
                     alert('deleted successful');
-                    const remaining = jobs.filter(job => job._id !== id);
-                    setJobs(remaining);
+                    const remaining = toys.filter(toy => toy._id !== id);
+                    setToys(remaining);
                 }
             })
     }
@@ -57,7 +58,7 @@ const MyToys = () => {
 
   return (
     <div>
-      <div className="my-jobs-container">
+      <div className="">
         <h1 className="text-center p-4 "> All My Toy.</h1>
         <div className="search-box p-2 text-center">
           <input
@@ -82,24 +83,24 @@ const MyToys = () => {
             </tr>
           </thead>
           <tbody>
-            {jobs?.map((job, index) => (
-              <tr key={job._id}>
-                <td>{index + 1}</td>
-                <td>{job.name}</td>
-                <td>{job.category}</td>
-                <td>{job.subCategory}</td>
-                <td>{job.price}</td>
-                <td>{job.available_quantity}</td>
-                <td>{job.rating}</td>
+            {toys?.map((toy, i) => (
+              <tr key={toy._id}>
+                <td>{i + 1}</td>
+                <td>{toy.name}</td>
+                <td>{toy.category}</td>
+                <td>{toy.subCategory}</td>
+                <td>{toy.price}</td>
+                <td>{toy.available_quantity}</td>
+                <td>{toy.rating}</td>
                 <td>
                   <button>
-                    <Link to={`/edit/${job._id}`}>Edit</Link>
+                    <Link to={`/edit/${toy._id}`}>Edit</Link>
                   </button>
                 </td>
                 <td>
                   {" "}
                   <button 
-                  onClick={()=>handleDelete(job._id)}
+                  onClick={()=>handleDelete(toy._id)}
                   >
                     Delete
                     </button>

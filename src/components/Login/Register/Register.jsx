@@ -2,9 +2,10 @@ import { useContext, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 import { Toaster, toast } from "react-hot-toast";
+import useTitle from "../../Shared/hook/useTitle";
 
 const Register = () => {
-
+useTitle('Register')
 
 
   const {createUser,updateUser} = useContext(AuthContext)

@@ -61,7 +61,7 @@ const NavigationBar = () => {
               </Link>
             </li>
             <li>
-              <Link to='/addJob'>
+              <Link to='/addToy'>
               <p>Add A Toy</p>
               </Link>
             </li>
@@ -100,7 +100,7 @@ const NavigationBar = () => {
               </Link>
             </li>
             <li>
-              <Link to='/addJob'>
+              <Link to='/addToy'>
               <p>Add A Toy</p>
               </Link>
             </li>

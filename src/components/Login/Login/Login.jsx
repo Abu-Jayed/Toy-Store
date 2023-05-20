@@ -5,11 +5,12 @@ import { GithubAuthProvider, GoogleAuthProvider, getAuth, signInWithPopup } from
 import { useContext, useState } from "react";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 import app from "../../../firebase/firebase.config";
+import useTitle from "../../Shared/hook/useTitle";
 
 const auth = getAuth(app)
 
 const Login = () => {
-
+  useTitle('Login')
 
   const { loginUser,user } = useContext(AuthContext);
   const [error, setError] = useState("");
