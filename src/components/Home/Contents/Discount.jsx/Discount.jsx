@@ -1,4 +1,4 @@
-import { GrDeliver, GrFacebook } from "react-icons/gr";
+import { GrDeliver, GrFacebook, GrShop } from "react-icons/gr";
 import { CgShoppingCart } from "react-icons/cg";
 
 const Discount = () => {
@@ -48,17 +48,17 @@ const Discount = () => {
               <div className=" md:gap-10 flex items-center">
                 
                 <h2 className="md:font-bold text-xl">Free standard delievery on order <br /> <span className="md:ml-32 md:text-4xl text-orange-500">$43</span> </h2>
-                <GrDeliver className="text-red-700 w-10 h-10"></GrDeliver>
+                <GrShop className="text-red-700 w-10 h-10"></GrShop>
               </div>
             </div>
             <div>
-              <div className=" md:gap-10 flex items-center md:w-0 w-60">
+              <div className=" md:gap-10 flex items-center md:w-52 w-60">
                 <div className="text-center">
 
                 <h2 className=" md:font-bold md:text-lg">Recive your delievery from <br /> more than 1500 store<br /> <span className=" md:text-xl text-orange-500 ">Shop Now</span> </h2>
                 </div>
 
-                <GrDeliver className="text-red-700 w-10 h-10"></GrDeliver>
+                <GrDeliver className="text-red-700 w-16 h-16"></GrDeliver>
               </div>
             </div>
           </div>

@@ -16,6 +16,7 @@ const AllToy = () => {
         console.log(data);
         setToys(data);
       });
+      setSearchText('')
   };
 
 
@@ -41,11 +42,7 @@ const AllToy = () => {
     {/* head */}
     <thead>
       <tr>
-        <th>
-          <label>
-            <input type="checkbox" className="checkbox" />
-          </label>
-        </th>
+        
         <th>Name</th>
         <th>Job</th>
         <th>Favorite Color</th>
@@ -56,11 +53,7 @@ const AllToy = () => {
       {
         toys.map(toy =>{
           return <tr key={toy._id}>
-          <th>
-            <label>
-              <input type="checkbox" className="checkbox" />
-            </label>
-          </th>
+          
           <td>
             <div className="flex items-center space-x-3">
               <div className="avatar">

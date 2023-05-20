@@ -19,13 +19,13 @@ const Details = () => {
   console.log(data);
   return (
     <div>
-        <h1 className="text-4xl text-warning font-bold text-center">Click View details to see details</h1>
+        
       {/* modal start here */}
-      <div className="text-center">
+      <div className="text-center mt-32">
 
       {/* The button to open modal */}
-      <label htmlFor="my-modal-6" className="btn">
-        open modal
+      <label htmlFor="my-modal-6" className="btn btn-warning h-20 px-7 text-3xl font-bold text-red-700">
+        Click Here To See Details
       </label>
 
       {/* Put this part before </body> tag */}
@@ -54,8 +54,8 @@ const Details = () => {
                       </div>
                       <p>now available {available_quantity}</p>
           <div className="modal-action">
-            <label htmlFor="my-modal-6" className="btn">
-              Yay!
+            <label htmlFor="my-modal-6" className="btn bg-pink-700 font-bold hover:bg-pink-800">
+              Got it!
             </label>
           </div>
         </div>

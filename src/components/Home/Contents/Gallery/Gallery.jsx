@@ -1,7 +1,16 @@
-import { GrStar } from "react-icons/gr";
-import { BsStar, BsStarFill, BsStarHalf } from "react-icons/bs";
+import {  BsStarFill, BsStarHalf } from "react-icons/bs";
+import Swal from "sweetalert2";
 
 const Gallery = () => {
+    const handleOrderConfirm = () =>{
+        Swal.fire({
+            position: "top-center",
+            icon: "success",
+            title: "Order confirm successfully",
+            showConfirmButton: false,
+            timer: 1400,
+          });
+    }
     return (
         <div data-aos="fade-up" className="grid grid-cols-2 md:grid-cols-3 max-w-[1100px] mx-auto md:my-10 gap-10">
             <div className="shadow-md hover:shadow-md hover:shadow-black shadow-gray-600">
@@ -15,7 +24,7 @@ const Gallery = () => {
                 <BsStarFill></BsStarFill>
                 <BsStarHalf></BsStarHalf>
                 <p>4.6 <span className="text-violet-500"> (64)</span></p>
-                <button className="text-lg md:ml-5 font-bold p-1 rounded-xl bg-warning">Buy Now</button>
+                <button onClick={handleOrderConfirm} className="text-lg md:ml-5 font-bold p-1 rounded-xl bg-warning">Buy Now</button>
                 </div>
             </div>
             <div className="shadow-md hover:shadow-md hover:shadow-black shadow-gray-600">
@@ -29,7 +38,7 @@ const Gallery = () => {
                 <BsStarFill></BsStarFill>
                 <BsStarHalf></BsStarHalf>
                 <p>4.7 <span className="text-violet-500"> (84)</span></p>
-                <button className="text-lg md:ml-5 font-bold p-1 rounded-xl bg-warning">Buy Now</button>
+                <button onClick={handleOrderConfirm} className="text-lg md:ml-5 font-bold p-1 rounded-xl bg-warning">Buy Now</button>
                 </div>
             </div>
             <div className="shadow-md hover:shadow-md hover:shadow-black shadow-gray-600">
@@ -43,7 +52,7 @@ const Gallery = () => {
                 <BsStarFill></BsStarFill>
                 <BsStarFill></BsStarFill>
                 <p>5.0 <span className="text-violet-500"> (15)</span></p>
-                <button className="text-lg md:ml-5 font-bold p-1 rounded-xl bg-warning">Buy Now</button>
+                <button onClick={handleOrderConfirm} className="text-lg md:ml-5 font-bold p-1 rounded-xl bg-warning">Buy Now</button>
                 </div>
             </div>
             <div className="shadow-md hover:shadow-md hover:shadow-black shadow-gray-600">
@@ -57,7 +66,7 @@ const Gallery = () => {
                 <BsStarFill></BsStarFill>
                 <BsStarFill></BsStarFill>
                 <p>5.0 <span className="text-violet-500"> (35)</span></p>
-                <button className="text-lg md:ml-5 font-bold p-1 rounded-xl bg-warning">Buy Now</button>
+                <button onClick={handleOrderConfirm} className="text-lg md:ml-5 font-bold p-1 rounded-xl bg-warning">Buy Now</button>
                 </div>
             </div>
             <div className="shadow-md hover:shadow-md hover:shadow-black shadow-gray-600">
@@ -71,7 +80,7 @@ const Gallery = () => {
                 <BsStarFill></BsStarFill>
                 <BsStarHalf></BsStarHalf>
                 <p>4.8 <span className="text-violet-500"> (52)</span></p>
-                <button className="text-lg md:ml-5 font-bold p-1 rounded-xl bg-warning">Buy Now</button>
+                <button onClick={handleOrderConfirm} className="text-lg md:ml-5 font-bold p-1 rounded-xl bg-warning">Buy Now</button>
                 </div>
             </div>
             <div className="shadow-md hover:shadow-md hover:shadow-black shadow-gray-600">
@@ -85,7 +94,7 @@ const Gallery = () => {
                 <BsStarFill></BsStarFill>
                 <BsStarHalf></BsStarHalf>
                 <p>4.7 <span className="text-violet-500"> (71)</span></p>
-                <button className="text-lg md:ml-5 font-bold p-1 rounded-xl bg-warning">Buy Now</button>
+                <button onClick={handleOrderConfirm} className="text-lg md:ml-5 font-bold p-1 rounded-xl bg-warning">Buy Now</button>
                 </div>
             </div>
             <div className="shadow-md hover:shadow-md hover:shadow-black shadow-gray-600">
@@ -99,7 +108,7 @@ const Gallery = () => {
                 <BsStarFill></BsStarFill>
                 <BsStarFill></BsStarFill>
                 <p>5.0 <span className="text-violet-500"> (19)</span></p>
-                <button className="text-lg md:ml-5 font-bold p-1 rounded-xl bg-warning">Buy Now</button>
+                <button onClick={handleOrderConfirm} className="text-lg md:ml-5 font-bold p-1 rounded-xl bg-warning">Buy Now</button>
                 </div>
             </div>
             <div className="shadow-md hover:shadow-md hover:shadow-black shadow-gray-600">
@@ -113,7 +122,7 @@ const Gallery = () => {
                 <BsStarFill></BsStarFill>
                 <BsStarHalf></BsStarHalf>
                 <p>4.5 <span className="text-violet-500"> (56)</span></p>
-                <button className="text-lg md:ml-5 font-bold p-1 rounded-xl bg-warning">Buy Now</button>
+                <button onClick={handleOrderConfirm} className="text-lg md:ml-5 font-bold p-1 rounded-xl bg-warning">Buy Now</button>
                 </div>
             </div>
             <div className="shadow-md hover:shadow-md hover:shadow-black shadow-gray-600">
@@ -127,10 +136,9 @@ const Gallery = () => {
                 <BsStarFill></BsStarFill>
                 <BsStarFill></BsStarFill>
                 <p>5.0 <span className="text-violet-500"> (67)</span></p>
-                <button className="text-lg md:ml-5 font-bold p-1 rounded-xl bg-warning">Buy Now</button>
+                <button onClick={handleOrderConfirm} className="text-lg md:ml-5 font-bold p-1 rounded-xl bg-warning">Buy Now</button>
                 </div>
             </div>
-            
         </div>
     );
 };
