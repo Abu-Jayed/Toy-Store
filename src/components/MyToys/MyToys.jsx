@@ -13,23 +13,25 @@ import { Toaster, toast } from "react-hot-toast";
 import Swal from "sweetalert2";
 
 const MyToys = () => {
-  useTitle('My Toys')
+  useTitle("My Toys");
   const { user } = useContext(AuthContext);
   const [toys, setToys] = useState([]);
   const [searchText, setSearchText] = useState("");
-  
-  const [grow,setGrow] = useState('yes')
-  const handleGrow =(agree)=>{
-    if(agree == true){
-      setGrow('yes')
-    }else{
-      setGrow('no')
+
+  const [grow, setGrow] = useState("yes");
+  const handleGrow = (agree) => {
+    if (agree == true) {
+      setGrow("yes");
+    } else {
+      setGrow("no");
     }
     console.log(grow);
-  }
+  };
 
   useEffect(() => {
-    fetch(`https://toy-hero-server.vercel.app/myToys/${user?.email}?grow=${grow}`)
+    fetch(
+      `https://toy-hero-server.vercel.app/myToys/${user?.email}?grow=${grow}`
+    )
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
@@ -39,54 +41,44 @@ const MyToys = () => {
 
   /* delete code start here */
   const handleDelete = (id) => {
-
     /* swal confirmation start */
 
     Swal.fire({
-      title: 'Are you sure?',
+      title: "Are you sure?",
       text: "You won't be able to revert this!",
-      icon: 'warning',
+      icon: "warning",
       showCancelButton: true,
-      confirmButtonColor: '#3085d6',
-      cancelButtonColor: '#d33',
-      confirmButtonText: 'Yes, delete it!'
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        Swal.fire(
-          'Deleted!',
-          'Your file has been deleted.',
-          'success'
-        )
-
+        Swal.fire("Deleted!", "Your file has been deleted.", "success");
 
         fetch(`https://toy-hero-server.vercel.app/toys/${id}`, {
-            method: 'DELETE'
+          method: "DELETE",
         })
-            .then(res => res.json())
-            .then(data => {
-                console.log(data);
-                if (data.deletedCount > 0) {
-                  toast.success('Toy deleted successfully')
-                    const remaining = toys.filter(toy => toy._id !== id);
-                    setToys(remaining);
-                }
-            })
-      }else{
+          .then((res) => res.json())
+          .then((data) => {
+            console.log(data);
+            if (data.deletedCount > 0) {
+              toast.success("Toy deleted successfully");
+              const remaining = toys.filter((toy) => toy._id !== id);
+              setToys(remaining);
+            }
+          });
+      } else {
         Swal.fire({
-          position: 'top-center',
-          icon: 'warning',
-          title: 'Your toy is not deleted yet!',
+          position: "top-center",
+          icon: "warning",
+          title: "Your toy is not deleted yet!",
           showConfirmButton: false,
-          timer: 1500
-        })
+          timer: 1500,
+        });
       }
-    })
+    });
 
     /* swal confirmation end */
-
-
-
-
   };
   /* delete code end here */
 
@@ -99,12 +91,15 @@ const MyToys = () => {
             onChange={(e) => setSearchText(e.target.value)}
             type="text"
             className="p-1"
-            
           />{" "}
-          <button className="btn btn-warning" onClick={()=>handleGrow(true)}>Decrese</button>
-          <button className="btn btn-info" onClick={()=>handleGrow(false)}>Acces</button>
+          <button className="btn btn-warning" onClick={() => handleGrow(true)}>
+            Decrese
+          </button>
+          <button className="btn btn-info" onClick={() => handleGrow(false)}>
+            Acces
+          </button>
         </div>
-        <table className="container">
+        {/* <table className="container">
           <thead>
             <tr>
               <th>#</th>
@@ -133,18 +128,93 @@ const MyToys = () => {
                 </td>
                 <td>
                   {" "}
-                  <button 
-                  onClick={()=>handleDelete(toy._id)}
-                  >
-                    Delete
-                    </button>
-                  {/* <UpdateToy></UpdateToy> */}
+                  <button onClick={() => handleDelete(toy._id)}>Delete</button>
                 </td>
               </tr>
             ))}
           </tbody>
+        </table> */}
+      </div>
+
+      {/* another table start */}
+      <div className="overflow-x-auto mt-20">
+        <table className="table table-zebra w-full">
+          {/* head */}
+          <thead>
+            <tr>
+              <th></th>
+              <th>Name</th>
+              <th>Category</th>
+              <th>Sub Category</th>
+              <th>Price</th>
+              <th>Quantity</th>
+              <th>Rating</th>
+              <th></th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            {toys.map((toy, i) => {
+              return (
+                <tr className="">
+                  <th>{i + 1}</th>
+                  <td className="max-w-[200px] overflow-scroll">
+                    {toy.name}
+                  </td>
+                  <td>
+                    {toy.category}
+                  </td>
+                  <td>
+                    {toy.subCategory}
+                  </td>
+                  <td>$
+                    {toy.price}
+                  </td>
+                  <td>
+                    {toy.available_quantity}
+                  </td>
+                  <td>
+                    {toy.rating}
+                  </td>
+                  <td>
+                    {/* <button>Update</button> */}
+                    <Link to={`/edit/${toy._id}`}>
+                      <button>Update</button>
+                    </Link>
+                  </td>
+                  <td>
+                    <button onClick={() => handleDelete(toy._id)}>
+                      Delete
+                    </button>
+                  </td>
+                </tr>
+              );
+            })}
+            {/* row 1 */}
+
+            {/* <tr className="">
+              <th>1</th>
+              <td className="max-w-[200px] overflow-scroll">
+                Mighty ThorMighty ThorMighty ThorMighty ThorMighty ThorMighty
+                Thor
+              </td>
+              <td>Marvel</td>
+              <td>Heroin</td>
+              <td>$32</td>
+              <td>245</td>
+              <td>3.45</td>
+              <td>
+                <button>Update</button>
+              </td>
+              <td>
+                <button>Delete</button>
+              </td>
+            </tr> */}
+            {/* row 2 */}
+          </tbody>
         </table>
       </div>
+      {/* another table end */}
       <Toaster></Toaster>
     </div>
   );

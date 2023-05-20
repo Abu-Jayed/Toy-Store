@@ -20,7 +20,7 @@ const ByCategory = () => {
           shop by category
         </p>
         {/* 1st floor start */}
-        <div className={`absolute left-14 ${show?'md:visible':'md:invisible'} py-10 rounded-3xl  md:flex md:gap-5 justify-center `}>
+        <div className={`absolute md:left-[52px] ${show?'visible':'invisible'} py-10 rounded-3xl  md:flex md:gap-5 justify-center `}>
           <div className="bg-pink-300  w-48 h-60 rounded-xl flex justify-center ">
             <div className="mt-3">
               <img className="rounded-xl w-[167px] h-[157]" src={cat1} alt="" />
@@ -64,7 +64,7 @@ const ByCategory = () => {
         </div>
 
         {/* 2nd floor start */}
-        <div className={`${show?'md:invisible':'md:visible'} top-9 relative `}>
+        <div className={`${show?'invisible':'visible'}  top-6 md:top-9 relative `}>
           <div className=" py-1 rounded-3xl  md:flex md:gap-5 justify-center">
             <div className=" bg-green-700 border shadow-lg mb-6 w-48 h-60 rounded-xl flex justify-center ">
               <div className="mt-3">
@@ -130,8 +130,8 @@ const ByCategory = () => {
         </div>
         {/* 2nd floor end */}
 
-        <button onClick={() => setShow(true)} className="mt-10 btn btn-warning">Left</button>
-        <button onClick={() => setShow(false)} className="btn btn-warning">Right</button>
+        <button onClick={() => setShow(!show)} className="mt-10 btn btn-warning">Left</button>
+        <button onClick={() => setShow(!show)} className="btn btn-warning">Right</button>
  
       </div>
     </div>

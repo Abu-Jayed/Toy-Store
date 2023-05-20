@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { toast } from "react-hot-toast";
 import { BsStarFill, BsStarHalf } from "react-icons/bs";
 import { Link, redirect, useNavigate } from "react-router-dom";
@@ -12,6 +12,14 @@ const Category = () => {
   const {user} = useContext(AuthContext)
   
   const navigate = useNavigate()
+
+  useEffect(()=>{
+    fetch(`https://toy-hero-server.vercel.app/allToy/Marvel/Hero`)
+    .then(res => res.json())
+    .then(data => {
+      setMarvel(data)
+    })
+  },[])
 
   const handleCheck = (type) => {
     fetch(`https://toy-hero-server.vercel.app/allToy/Marvel/${type}`)
@@ -84,7 +92,7 @@ const Category = () => {
             </TabList>
 
             <TabPanel>
-              <div className=" md:flex flex flex-col md:flex-row gap-4">
+              <div className=" md:grid flex flex-col md:grid-cols-3 gap-4">
                 {marvel?.map((hero) => {
                   return (
                     <div
