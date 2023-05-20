@@ -6,6 +6,8 @@ import Slider from "../Contents/Slider/Slider";
 import ByAge from "../Contents/ByAge/ByAge";
 import ByCategory from "../Contents/ByCategory/ByCategory";
 import useTitle from "../../Shared/hook/useTitle";
+import SummerToy from "../Contents/SummerToy/SummerToy";
+import ByBrand from "../Contents/ByBrand/ByBrand";
 
 const Home = () => {
     useTitle('Home')
@@ -18,6 +20,8 @@ const Home = () => {
             <Category></Category>
             <ByAge></ByAge>
             <ByCategory></ByCategory>
+            <ByBrand></ByBrand>
+            <SummerToy></SummerToy>
         </div>
     );
 };
