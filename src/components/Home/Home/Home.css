@@ -1,0 +1,7 @@
+.divBg {
+    background-image: url("../../../../src/assets/img/bg1.jpg");
+    background-repeat: no-repeat;
+  background-position: right top;
+  background-attachment: fixed;
+  background-size: cover;
+  }

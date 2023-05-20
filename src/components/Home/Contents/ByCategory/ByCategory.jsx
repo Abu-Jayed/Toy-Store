@@ -15,9 +15,10 @@ const ByCategory = () => {
 
   return (
     <div data-aos="fade-up">
+      <h1></h1>
       <div className={ `  border-4 rounded-[30px] md:mt-32 mt-8 md:relative`}>
         <p className="text-3xl font-bold md:absolute md:left-32 -top-5 bg-white px-3 italic">
-          shop by category
+          shop by Charector
         </p>
         {/* 1st floor start */}
         <div className={`absolute md:left-[52px] ${show?'visible':'invisible'} py-10 rounded-3xl  md:flex md:gap-5 justify-center `}>

@@ -1,65 +1,65 @@
-import brand1 from '../../../../assets/img/brand1.jpg'
-import brand2 from '../../../../assets/img/brand2.jpg'
-import brand3 from '../../../../assets/img/brand3.jpg'
-import brand4 from '../../../../assets/img/brand4.jpg'
-import brand5 from '../../../../assets/img/brand5.jpg'
-import brand6 from '../../../../assets/img/brand6.jpg'
-import brand7 from '../../../../assets/img/brand7.jpg'
-import brand8 from '../../../../assets/img/brand8.jpg'
-import brand9 from '../../../../assets/img/brand9.jpg'
-import brand10 from '../../../../assets/img/brand10.jpg'
+import cha1 from '../../../../assets/img/cha1.jpg'
+import cha2 from '../../../../assets/img/cha2.jpg'
+import cha3 from '../../../../assets/img/cha3.jpg'
+import cha4 from '../../../../assets/img/cha4.jpg'
+import cha5 from '../../../../assets/img/cha5.jpg'
+import cha6 from '../../../../assets/img/cha6.jpg'
+import cha7 from '../../../../assets/img/cha7.jpg'
+import cha8 from '../../../../assets/img/cha8.jpg'
+import cha9 from '../../../../assets/img/cha9.jpg'
+import cha10 from '../../../../assets/img/cha10.jpg'
 
 
 import { useState } from "react";
 
-const ByBrand = () => {
+const ByCharacter = () => {
     const [show,setShow] = useState(false)
 
   return (
     <div data-aos="fade-up">
-      <div className={ `  border-4 rounded-[30px] md:mt-32 mt-8 md:relative`}>
+      <div className={ `  -4 rounded-[30px] md:mt-32 mt-8 md:relative`}>
         <p className="text-3xl font-bold md:absolute md:left-32 -top-5 bg-white px-3 italic">
-          shop by brand
+          Most selling charector
         </p>
         {/* 1st floor start */}
         <div className={`absolute md:left-[52px] ${show?'visible':'invisible'} py-10 rounded-3xl  md:flex md:gap-5 justify-center `}>
-          <div className=" shadow-black shadow-md  w-48 h-48 rounded-xl flex justify-center ">
+          <div className="bg-blue-400  w-48 h-60 rounded-xl flex justify-center ">
             <div className="mt-3">
-              <img className="rounded-xl w-[167px] h-[157]" src={brand1} alt="" />
+              <img className="rounded-xl w-[167px] h-[157]" src={cha1} alt="" />
               <p className="text-white font-bold text-2xl text-center my-3">
                 
               </p>
             </div>
           </div>
-          <div className="- shadow-black shadow-md  w-48 h-48 rounded-xl flex justify-center mt-4 md:mt-0">
+          <div className="bg-blue-400  w-48 h-60 rounded-xl flex justify-center mt-4 md:mt-0">
             <div className="mt-3">
-              <img className="rounded-xl w-[167px] h-[157]" src={brand2} alt="" />
+              <img className="rounded-xl w-[167px] h-[157]" src={cha2} alt="" />
               <p className="text-white font-bold text-2xl text-center my-3">
                 
               </p>
             </div>
           </div>
-          <div className="- shadow-black shadow-md  w-48 h-48 rounded-xl flex justify-center mt-4 md:mt-0">
+          <div className="bg-blue-400  w-48 h-60 rounded-xl flex justify-center mt-4 md:mt-0">
             <div className="mt-3">
-              <img className="rounded-xl w-[167px] h-[157]" src={brand3} alt="" />
+              <img className="rounded-xl w-[167px] h-[157]" src={cha3} alt="" />
               <p className="text-white font-bold text-2xl text-center my-3">
                 
               </p>
             </div>
           </div>
-          <div className="- shadow-black shadow-md  w-48 h-48 rounded-xl flex justify-center mt-4 md:mt-0">
+          <div className="bg-blue-400  w-48 h-60 rounded-xl flex justify-center mt-4 md:mt-0">
             <div className="mt-3">
-              <img className="rounded-xl w-[167px] h-[157]" src={brand4} alt="" />
+              <img className="rounded-xl w-[167px] h-[157]" src={cha4} alt="" />
               <p className="text-white font-bold text-2xl text-center my-3">
-                8
+                
               </p>
             </div>
           </div>
-          <div className="- shadow-black shadow-md  w-48 h-48 rounded-xl flex justify-center mt-4 md:mt-0">
+          <div className="bg-blue-400  w-48 h-60 rounded-xl flex justify-center mt-4 md:mt-0">
             <div className="mt-3">
-              <img className="rounded-xl w-[167px] h-[157]" src={brand5} alt="" />
+              <img className="rounded-xl w-[167px] h-[157]" src={cha5} alt="" />
               <p className="text-white font-bold text-2xl text-center my-3">
-                
+            
               </p>
             </div>
           </div>
@@ -68,11 +68,11 @@ const ByBrand = () => {
         {/* 2nd floor start */}
         <div className={`${show?'invisible':'visible'}  top-6 md:top-9 relative `}>
           <div className=" py-1 rounded-3xl  md:flex md:gap-5 justify-center">
-            <div className="  border  mb- shadow-black shadow-md w-48  5 h-48 unded-xl flex justify-center ">
+            <div className="   bg-blue-400 shadow-lg mb-6 w-48 h-60 rounded-xl flex justify-center ">
               <div className="mt-3">
                 <img
                   className="rounded-xl w-[167px] h-[157]"
-                  src={brand6}
+                  src={cha6}
                   alt=""
                 />
                 <p className="text-white font-bold text-2xl text-center my-3">
@@ -80,11 +80,11 @@ const ByBrand = () => {
                 </p>
               </div>
             </div>
-            <div className=" border  mb-6 w-48  rounded-xl flex justify-center mt- shadow-black shadow-md 5 h-48 :mt-0">
+            <div className="  bg-blue-400 shadow-lg mb-6 w-48 h-60 rounded-xl flex justify-center mt-4 md:mt-0">
               <div className="mt-3">
                 <img
                   className="rounded-xl w-[167px] h-[157]"
-                  src={brand7}
+                  src={cha7}
                   alt=""
                 />
                 <p className="text-white font-bold text-2xl text-center my-3">
@@ -92,11 +92,11 @@ const ByBrand = () => {
                 </p>
               </div>
             </div>
-            <div className=" border  mb-6 w-48  rounded-xl flex justify-center mt- shadow-black shadow-md 5 h-48 :mt-0">
+            <div className="  bg-blue-400 shadow-lg mb-6 w-48 h-60 rounded-xl flex justify-center mt-4 md:mt-0">
               <div className="mt-3">
                 <img
                   className="rounded-xl w-[167px] h-[157]"
-                  src={brand8}
+                  src={cha8}
                   alt=""
                 />
                 <p className="text-white font-bold text-2xl text-center my-3">
@@ -104,27 +104,27 @@ const ByBrand = () => {
                 </p>
               </div>
             </div>
-            <div className=" border  mb-6 w-48  rounded-xl flex justify-center mt- shadow-black shadow-md 5 h-48 :mt-0">
+            <div className="  bg-blue-400 shadow-lg mb-6 w-48 h-60 rounded-xl flex justify-center mt-4 md:mt-0">
               <div className="mt-3">
                 <img
                   className="rounded-xl w-[167px] h-[157]"
-                  src={brand9}
-                  alt=""
-                />
-                <p className="text-white font-bold text-2xl text-center my-3">
-                  8
-                </p>
-              </div>
-            </div>
-            <div className=" border  mb-6 w-48  rounded-xl flex justify-center mt- shadow-black shadow-md 5 h-48 :mt-0">
-              <div className="mt-3">
-                <img
-                  className="rounded-xl w-[167px] h-[157]"
-                  src={brand10}
+                  src={cha9}
                   alt=""
                 />
                 <p className="text-white font-bold text-2xl text-center my-3">
                   
+                </p>
+              </div>
+            </div>
+            <div className="  bg-blue-400 shadow-lg mb-6 w-48 h-60 rounded-xl flex justify-center mt-4 md:mt-0">
+              <div className="mt-3">
+                <img
+                  className="rounded-xl w-[167px] h-[157]"
+                  src={cha10}
+                  alt=""
+                />
+                <p className="text-white font-bold text-2xl text-center my-3">
+                
                 </p>
               </div>
             </div>
@@ -140,4 +140,4 @@ const ByBrand = () => {
   );
 };
 
-export default ByBrand;
+export default ByCharacter;
