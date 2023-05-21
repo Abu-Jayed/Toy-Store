@@ -22,7 +22,7 @@ const ByBrand = () => {
           shop by brand
         </p>
         {/* 1st floor start */}
-        <div className={`absolute md:left-[52px] ${show?'visible':'invisible'} py-10 rounded-3xl  md:flex md:gap-5 justify-center `}>
+        <div className={`absolute md:left-[52px] ${show?'visible':'invisible'} py-10 rounded-3xl ml-32 md:ml-0 md:flex md:gap-5 justify-center `}>
           <div className=" shadow-black shadow-md  w-48 h-48 rounded-xl flex justify-center ">
             <div className="mt-3">
               <img className="rounded-xl w-[167px] h-[157]" src={brand1} alt="" />
@@ -66,7 +66,7 @@ const ByBrand = () => {
         </div>
 
         {/* 2nd floor start */}
-        <div className={`${show?'invisible':'visible'}  top-6 md:top-9 relative `}>
+        <div className={`${show?'invisible':'visible'} ml-32 md:ml-0  top-6 md:top-9 relative `}>
           <div className=" py-1 rounded-3xl  md:flex md:gap-5 justify-center">
             <div className="  border  mb- shadow-black shadow-md w-48  5 h-48 unded-xl flex justify-center ">
               <div className="mt-3">

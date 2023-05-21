@@ -30,7 +30,7 @@ const Home = () => {
         </div>
       </div>
       {/* <SummerToy></SummerToy> */}
-      <div className='grid md:  grid-cols-2 mt-20'>
+      <div className='grid md:grid-cols-2 mt-20'>
         <div className=' mx-auto'>
             <img className='' src={owener} alt="" />
         </div>

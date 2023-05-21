@@ -12,6 +12,10 @@ const Gallery = () => {
           });
     }
     return (
+        <div>
+            <h1 className=" text-5xl font-bold hover:bg-rose-600 rounded-2xl mx-auto py-4 w-[500px] hover:text-white hover:rotate-2 ease-in duration-300 text-center mt-28 text-black">Toy Gallery
+      
+      </h1>
         <div data-aos="fade-up" className="grid grid-cols-2 md:grid-cols-3 max-w-[1100px] mx-auto md:my-10 gap-10">
             <div className="shadow-md hover:shadow-md hover:shadow-black shadow-gray-600">
                 <img className="mx-auto w-48" src="https://slimages.macys.com/is/image/MCY/products/0/optimized/22528380_fpx.tif" alt="" />
@@ -24,7 +28,7 @@ const Gallery = () => {
                 <BsStarFill></BsStarFill>
                 <BsStarHalf></BsStarHalf>
                 <p>4.6 <span className="text-violet-500"> (64)</span></p>
-                <button onClick={handleOrderConfirm} className="text-lg md:ml-5 font-bold p-1 rounded-xl bg-warning">Buy Now</button>
+                <button onClick={handleOrderConfirm} className="text-lg md:ml-5 font-bold p-1 rounded-xl text-white bg-rose-500 ">Buy Now</button>
                 </div>
             </div>
             <div className="shadow-md hover:shadow-md hover:shadow-black shadow-gray-600">
@@ -38,7 +42,7 @@ const Gallery = () => {
                 <BsStarFill></BsStarFill>
                 <BsStarHalf></BsStarHalf>
                 <p>4.7 <span className="text-violet-500"> (84)</span></p>
-                <button onClick={handleOrderConfirm} className="text-lg md:ml-5 font-bold p-1 rounded-xl bg-warning">Buy Now</button>
+                <button onClick={handleOrderConfirm} className="text-lg md:ml-5 font-bold p-1 rounded-xl text-white bg-rose-500">Buy Now</button>
                 </div>
             </div>
             <div className="shadow-md hover:shadow-md hover:shadow-black shadow-gray-600">
@@ -52,7 +56,7 @@ const Gallery = () => {
                 <BsStarFill></BsStarFill>
                 <BsStarFill></BsStarFill>
                 <p>5.0 <span className="text-violet-500"> (15)</span></p>
-                <button onClick={handleOrderConfirm} className="text-lg md:ml-5 font-bold p-1 rounded-xl bg-warning">Buy Now</button>
+                <button onClick={handleOrderConfirm} className="text-lg md:ml-5 font-bold p-1 rounded-xl text-white bg-rose-500">Buy Now</button>
                 </div>
             </div>
             <div className="shadow-md hover:shadow-md hover:shadow-black shadow-gray-600">
@@ -66,7 +70,7 @@ const Gallery = () => {
                 <BsStarFill></BsStarFill>
                 <BsStarFill></BsStarFill>
                 <p>5.0 <span className="text-violet-500"> (35)</span></p>
-                <button onClick={handleOrderConfirm} className="text-lg md:ml-5 font-bold p-1 rounded-xl bg-warning">Buy Now</button>
+                <button onClick={handleOrderConfirm} className="text-lg md:ml-5 font-bold p-1 rounded-xl text-white bg-rose-500">Buy Now</button>
                 </div>
             </div>
             <div className="shadow-md hover:shadow-md hover:shadow-black shadow-gray-600">
@@ -80,7 +84,7 @@ const Gallery = () => {
                 <BsStarFill></BsStarFill>
                 <BsStarHalf></BsStarHalf>
                 <p>4.8 <span className="text-violet-500"> (52)</span></p>
-                <button onClick={handleOrderConfirm} className="text-lg md:ml-5 font-bold p-1 rounded-xl bg-warning">Buy Now</button>
+                <button onClick={handleOrderConfirm} className="text-lg md:ml-5 font-bold p-1 rounded-xl text-white bg-rose-500">Buy Now</button>
                 </div>
             </div>
             <div className="shadow-md hover:shadow-md hover:shadow-black shadow-gray-600">
@@ -94,7 +98,7 @@ const Gallery = () => {
                 <BsStarFill></BsStarFill>
                 <BsStarHalf></BsStarHalf>
                 <p>4.7 <span className="text-violet-500"> (71)</span></p>
-                <button onClick={handleOrderConfirm} className="text-lg md:ml-5 font-bold p-1 rounded-xl bg-warning">Buy Now</button>
+                <button onClick={handleOrderConfirm} className="text-lg md:ml-5 font-bold p-1 rounded-xl text-white bg-rose-500">Buy Now</button>
                 </div>
             </div>
             <div className="shadow-md hover:shadow-md hover:shadow-black shadow-gray-600">
@@ -108,7 +112,7 @@ const Gallery = () => {
                 <BsStarFill></BsStarFill>
                 <BsStarFill></BsStarFill>
                 <p>5.0 <span className="text-violet-500"> (19)</span></p>
-                <button onClick={handleOrderConfirm} className="text-lg md:ml-5 font-bold p-1 rounded-xl bg-warning">Buy Now</button>
+                <button onClick={handleOrderConfirm} className="text-lg md:ml-5 font-bold p-1 rounded-xl text-white bg-rose-500">Buy Now</button>
                 </div>
             </div>
             <div className="shadow-md hover:shadow-md hover:shadow-black shadow-gray-600">
@@ -122,7 +126,7 @@ const Gallery = () => {
                 <BsStarFill></BsStarFill>
                 <BsStarHalf></BsStarHalf>
                 <p>4.5 <span className="text-violet-500"> (56)</span></p>
-                <button onClick={handleOrderConfirm} className="text-lg md:ml-5 font-bold p-1 rounded-xl bg-warning">Buy Now</button>
+                <button onClick={handleOrderConfirm} className="text-lg md:ml-5 font-bold p-1 rounded-xl text-white bg-rose-500">Buy Now</button>
                 </div>
             </div>
             <div className="shadow-md hover:shadow-md hover:shadow-black shadow-gray-600">
@@ -136,10 +140,12 @@ const Gallery = () => {
                 <BsStarFill></BsStarFill>
                 <BsStarFill></BsStarFill>
                 <p>5.0 <span className="text-violet-500"> (67)</span></p>
-                <button onClick={handleOrderConfirm} className="text-lg md:ml-5 font-bold p-1 rounded-xl bg-warning">Buy Now</button>
+                <button onClick={handleOrderConfirm} className="text-lg md:ml-5 font-bold p-1 rounded-xl text-white bg-rose-500">Buy Now</button>
                 </div>
             </div>
         </div>
+        </div>
+
     );
 };
 

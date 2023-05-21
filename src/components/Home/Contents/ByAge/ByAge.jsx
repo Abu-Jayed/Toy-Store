@@ -22,7 +22,7 @@ const ByAge = () => {
 
 
     {/* 2nd floor start */}
-    <div className="mt-9 py-1 rounded-3xl  md:flex md:gap-5 justify-center">
+    <div className="ml-32 md:ml-0 mt-9 py-1 rounded-3xl  md:flex md:gap-5 justify-center">
         <div className=" bg-pink-100 border shadow-lg mb-6 w-48 h-60 rounded-xl flex justify-center ">
           <div className="mt-3">
             <img className="rounded-xl w-[167px] h-[157]" src={toy1} alt="" />
@@ -69,7 +69,7 @@ const ByAge = () => {
 
 
       {/* 1st floor start */}
-      <div className=" md:absolute md:top-0 md:left-[50px] md:py-10 md:rounded-3xl  md:flex md:gap-5 md:justify-center absolute top-[85px]">
+      <div className=" ml-32 md:ml-0 md:absolute md:top-0 md:left-[50px] md:py-10 md:rounded-3xl  md:flex md:gap-5 md:justify-center absolute top-[85px]">
         <div className="hover:opacity-0  bg-pink-300  w-48 h-60 rounded-xl flex justify-center ">
           <div className="mt-3">
             <img className="rounded-xl w-[167px] h-[157]" src={img1} alt="" />

@@ -22,7 +22,7 @@ const ByCharacter = () => {
           Most selling charector
         </p>
         {/* 1st floor start */}
-        <div className={`absolute md:left-[52px] ${show?'visible':'invisible'} py-10 rounded-3xl  md:flex md:gap-5 justify-center `}>
+        <div className={`ml-32 md:ml-0 absolute md:left-[52px] ${show?'visible':'invisible'} py-10 rounded-3xl  md:flex md:gap-5 justify-center `}>
           <div className="bg-blue-400  w-48 h-60 rounded-xl flex justify-center ">
             <div className="mt-3">
               <img className="rounded-xl w-[167px] h-[157]" src={cha1} alt="" />
@@ -66,7 +66,7 @@ const ByCharacter = () => {
         </div>
 
         {/* 2nd floor start */}
-        <div className={`${show?'invisible':'visible'}  top-6 md:top-9 relative `}>
+        <div className={`${show?'invisible':'visible'}  ml-32 md:ml-0 top-6 md:top-9 relative `}>
           <div className=" py-1 rounded-3xl  md:flex md:gap-5 justify-center">
             <div className="   bg-blue-400 shadow-lg mb-6 w-48 h-60 rounded-xl flex justify-center ">
               <div className="mt-3">

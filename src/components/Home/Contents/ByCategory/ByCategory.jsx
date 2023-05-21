@@ -21,8 +21,8 @@ const ByCategory = () => {
           shop by Charector
         </p>
         {/* 1st floor start */}
-        <div className={`absolute md:left-[52px] ${show?'visible':'invisible'} py-10 rounded-3xl  md:flex md:gap-5 justify-center `}>
-          <div className="bg-pink-300  w-48 h-60 rounded-xl flex justify-center ">
+        <div className={`absolute md:left-[52px] ${show?'visible':'invisible'} py-10 rounded-3xl ml-32 md:ml-0 md:flex md:gap-5 justify-center `}>
+          <div className="bg-rose-400  w-48 h-60 rounded-xl flex justify-center ">
             <div className="mt-3">
               <img className="rounded-xl w-[167px] h-[157]" src={cat1} alt="" />
               <p className="text-white font-bold text-2xl text-center my-3">
@@ -30,7 +30,7 @@ const ByCategory = () => {
               </p>
             </div>
           </div>
-          <div className="bg-pink-300  w-48 h-60 rounded-xl flex justify-center mt-4 md:mt-0">
+          <div className="bg-rose-400  w-48 h-60 rounded-xl flex justify-center mt-4 md:mt-0">
             <div className="mt-3">
               <img className="rounded-xl w-[167px] h-[157]" src={cat2} alt="" />
               <p className="text-white font-bold text-2xl text-center my-3">
@@ -38,7 +38,7 @@ const ByCategory = () => {
               </p>
             </div>
           </div>
-          <div className="bg-pink-300  w-48 h-60 rounded-xl flex justify-center mt-4 md:mt-0">
+          <div className="bg-rose-400  w-48 h-60 rounded-xl flex justify-center mt-4 md:mt-0">
             <div className="mt-3">
               <img className="rounded-xl w-[167px] h-[157]" src={cat3} alt="" />
               <p className="text-white font-bold text-2xl text-center my-3">
@@ -46,7 +46,7 @@ const ByCategory = () => {
               </p>
             </div>
           </div>
-          <div className="bg-pink-300  w-48 h-60 rounded-xl flex justify-center mt-4 md:mt-0">
+          <div className="bg-rose-400  w-48 h-60 rounded-xl flex justify-center mt-4 md:mt-0">
             <div className="mt-3">
               <img className="rounded-xl w-[167px] h-[157]" src={cat4} alt="" />
               <p className="text-white font-bold text-2xl text-center my-3">
@@ -54,7 +54,7 @@ const ByCategory = () => {
               </p>
             </div>
           </div>
-          <div className="bg-pink-300  w-48 h-60 rounded-xl flex justify-center mt-4 md:mt-0">
+          <div className="bg-rose-400  w-48 h-60 rounded-xl flex justify-center mt-4 md:mt-0">
             <div className="mt-3">
               <img className="rounded-xl w-[167px] h-[157]" src={cat5} alt="" />
               <p className="text-white font-bold text-2xl text-center my-3">
@@ -65,9 +65,9 @@ const ByCategory = () => {
         </div>
 
         {/* 2nd floor start */}
-        <div className={`${show?'invisible':'visible'}  top-6 md:top-9 relative `}>
+        <div className={`${show?'invisible':'visible'}  top-6 md:top-9 relative ml-32 md:ml-0 `}>
           <div className=" py-1 rounded-3xl  md:flex md:gap-5 justify-center">
-            <div className=" bg-green-700 border shadow-lg mb-6 w-48 h-60 rounded-xl flex justify-center ">
+            <div className=" bg-pink-700 border shadow-lg mb-6 w-48 h-60 rounded-xl flex justify-center ">
               <div className="mt-3">
                 <img
                   className="rounded-xl w-[167px] h-[157]"
@@ -79,7 +79,7 @@ const ByCategory = () => {
                 </p>
               </div>
             </div>
-            <div className="bg-green-700 border shadow-lg mb-6 w-48 h-60 rounded-xl flex justify-center mt-4 md:mt-0">
+            <div className="bg-pink-700 border shadow-lg mb-6 w-48 h-60 rounded-xl flex justify-center mt-4 md:mt-0">
               <div className="mt-3">
                 <img
                   className="rounded-xl w-[167px] h-[157]"
@@ -91,7 +91,7 @@ const ByCategory = () => {
                 </p>
               </div>
             </div>
-            <div className="bg-green-700 border shadow-lg mb-6 w-48 h-60 rounded-xl flex justify-center mt-4 md:mt-0">
+            <div className="bg-pink-700 border shadow-lg mb-6 w-48 h-60 rounded-xl flex justify-center mt-4 md:mt-0">
               <div className="mt-3">
                 <img
                   className="rounded-xl w-[167px] h-[157]"
@@ -103,7 +103,7 @@ const ByCategory = () => {
                 </p>
               </div>
             </div>
-            <div className="bg-green-700 border shadow-lg mb-6 w-48 h-60 rounded-xl flex justify-center mt-4 md:mt-0">
+            <div className="bg-pink-700 border shadow-lg mb-6 w-48 h-60 rounded-xl flex justify-center mt-4 md:mt-0">
               <div className="mt-3">
                 <img
                   className="rounded-xl w-[167px] h-[157]"
@@ -115,7 +115,7 @@ const ByCategory = () => {
                 </p>
               </div>
             </div>
-            <div className="bg-green-700 border shadow-lg mb-6 w-48 h-60 rounded-xl flex justify-center mt-4 md:mt-0">
+            <div className="bg-pink-700 border shadow-lg mb-6 w-48 h-60 rounded-xl flex justify-center mt-4 md:mt-0">
               <div className="mt-3">
                 <img
                   className="rounded-xl w-[167px] h-[157]"
