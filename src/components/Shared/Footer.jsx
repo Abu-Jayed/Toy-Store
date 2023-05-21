@@ -7,25 +7,37 @@ const Footer = () => {
         {/* Footer code start from here */}
         <footer className="footer p-10 bg-base-200 text-base-content">
           <div>
-            <span className="footer-title">Services</span>
-            <a className="link link-hover">Branding</a>
-            <a className="link link-hover">Design Toy</a>
-            <a className="link link-hover">Marketing</a>
-            <a className="link link-hover">Advertisement</a>
+            <span className="text-2xl font-bold text-black">Shop toys</span>
+            <a className="link link-hover">Action toys</a>
+            <a className="link link-hover">Construction</a>
+            <a className="link link-hover">Dolls & Fashion</a>
+            <a className="link link-hover">Pre School</a>
+            <a className="link link-hover">Toy Hero Exclusive</a>
           </div>
           <div>
-            <span className="footer-title">Company</span>
-            <a className="link link-hover">About us</a>
-            <a className="link link-hover">Contact</a>
-            <a className="link link-hover">Jobs</a>
-            <a className="link link-hover">Press kit</a>
+            <span className="text-2xl font-bold text-black">Shop by age</span>
+            <a className="link link-hover">0-11 Months</a>
+            <a className="link link-hover">1-2 years</a>
+            <a className="link link-hover">2-4 years</a>
+            <a className="link link-hover">5-6 years</a>
+            <a className="link link-hover">7-9 years</a>
+            <a className="link link-hover">Older Kids</a>
           </div>
           <div>
-            <span className="footer-title">Legal</span>
-            <a className="link link-hover">Terms of use</a>
-            <a className="link link-hover">Privacy policy</a>
-            <a className="link link-hover">Cookie policy</a>
+            <span className="text-2xl font-bold text-black">Toy Hero</span>
+            <a className="link link-hover">Toy Hero History</a>
+            <a className="link link-hover">Careers at Toy Hero</a>
+            <a className="link link-hover">Supplier Transparency</a>
             <a className="link link-hover">Refound Policy</a>
+          </div>
+          <div>
+            <span className="text-2xl font-bold text-black">Support</span>
+            <a className="link link-hover">Helpdesk</a>
+            <a className="link link-hover">FAQ's</a>
+            <a className="link link-hover">Contact Us</a>
+            <a className="link link-hover">Delivery</a>
+            <a className="link link-hover">Returns</a>
+            <a className="link link-hover">Order</a>
           </div>
         </footer>
         <footer className="footer px-10 py-4 border-t bg-base-200 text-base-content border-base-300">
@@ -44,7 +56,7 @@ const Footer = () => {
             <img className="w-20" src={logo} alt="" />
             <p>
               Toy-Hero Industries Ltd. <br />
-              Providing Inovative Toy since 1992
+              Providing Inovative Toy since 2016
             </p>
           </div>
           <div className="md:place-self-center md:justify-self-end">
