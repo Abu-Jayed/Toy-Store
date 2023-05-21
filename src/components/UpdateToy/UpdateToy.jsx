@@ -1,11 +1,12 @@
 import { useForm } from "react-hook-form";
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData, useNavigate } from "react-router-dom";
 import useTitle from "../Shared/hook/useTitle";
 import Swal from "sweetalert2";
 
 const UpdateToy = (props) => {
   useTitle('Update Toy')
     const data = useLoaderData()
+    const navigate = useNavigate()
     console.log(data);
     // console.log('id',data[0]._id);
     const id = [...data]
@@ -37,19 +38,20 @@ const UpdateToy = (props) => {
           showConfirmButton: false,
           timer: 1500
         })
+        navigate('/myToys')
       });
     console.log('data from onsubmit', data);
     console.log('id from onSubmit',id[0]._id);
   };
 
-
+console.log(data);
 
 
   return (
-    <div>
+    <div className="text-center mt-32">
       {/* The button to open modal */}
-      <label htmlFor="my-modal-6" className="btn">
-        open modal
+      <label htmlFor="my-modal-6" className="btn btn-warning h-20 px-7 text-3xl font-bold text-red-700">
+        Click Here To Update Toy
       </label>
 
       {/* Put this part before </body> tag */}
@@ -65,30 +67,31 @@ const UpdateToy = (props) => {
               type="text"
               placeholder="Type name here"
               className="input input-bordered input-primary w-full max-w-xs"
-              defaultValue={data.name}
+              defaultValue={data[0]?.name}
             />
 
             <input
               {...register("price")}
               type="text"
               defaultValue={data[0]?.price}
+              placeholder="price"
               className="input input-bordered input-primary w-full max-w-xs"
             />
             <input
               {...register("rating")}
               type="text"
+              defaultValue={data[0]?.rating}
               placeholder="rating"
-              defaultValue={props?.toy?.rating}
               className="input input-bordered input-primary w-full max-w-xs"
             />
             <input
               {...register("available_quantity")}
               type="text"
               placeholder="Quantity"
-              defaultValue={props?.toy?.available_quantity}
+              defaultValue={data[0]?.available_quantity}
               className="input input-bordered input-primary w-full max-w-xs"
             />
-
+<br />
             <select className="input" {...register("category")}>
               <option value="Marvel">Marvel</option>
               <option value="DC">DC</option>
@@ -99,27 +102,28 @@ const UpdateToy = (props) => {
               <option value="Heroin">Heroin</option>
               <option value="Villain">Villain</option>
             </select>
-
+<br />
             <input
               className="input"
               {...register("picture")}
               placeholder="image link"
               type="url"
-              defaultValue="https://images.pexels.com/photos/2528118/pexels-photo-2528118.jpeg?auto=compress&cs=tinysrgb&w=600"
-            />
+              defaultValue={data[0]?.picture}
+            /> 
             <input
               className="input"
               {...register("postedBy")}
             //   placeholder="your email"
-              defaultValue={props?.toy?.postedBy}
+              defaultValue={data[0]?.postedBy}
               type="email"
+              disabled
             />
             
 
             <input
               {...register("description")}
               type="text"
-              placeholder="Type here"
+              placeholder="Write description here"
               className="input input-bordered input-primary w-full max-w-xs"
             />
 
@@ -127,8 +131,8 @@ const UpdateToy = (props) => {
           </form>
 
           <div className="modal-action">
-            <label htmlFor="my-modal-6" className="btn">
-              Yay!
+            <label htmlFor="my-modal-6" className="btn bg-rose-500 hover:bg-rose-600">
+              Close
             </label>
           </div>
         </div>

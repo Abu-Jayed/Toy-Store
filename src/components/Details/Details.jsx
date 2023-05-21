@@ -14,8 +14,9 @@ const Details = () => {
     name,
     description,
     available_quantity,
+    postedBy
   } = data[0];
-  console.log(name);
+  // console.log();
   console.log(data);
   return (
     <div>
@@ -32,17 +33,22 @@ const Details = () => {
       <input type="checkbox" id="my-modal-6" className="modal-toggle" />
       <div className="modal modal-bottom sm:modal-middle">
         <div className="modal-box">
-          <h3 className="font-bold text-lg">
-            Congratulations random Internet user!
-          </h3>
-          <img src={picture} alt="" />
-          <p className="text-5xl font-bold text-orange-400 py-4">
+          
+          <img className="w-1/2 h-1/2 mx-auto rounded-xl" src={picture} alt="" />
+          <p className="text-4xl font-bold text-orange-400 py-4">
             {
                 name
             }
           </p>
-          <div className="flex items-center gap-3">
-            <p className="text-2xl font-bold">{price}</p>
+          <div>
+            <ul>
+              <li className="">seller email: {postedBy?postedBy:'seller not available'}</li>
+            </ul>
+          </div>
+
+          <div>
+
+          <div className="flex items-center gap-3 ml-40">
                         <p>{rating} </p>
                         <div className="flex text-orange-400">
                           <BsStarFill></BsStarFill>
@@ -52,7 +58,15 @@ const Details = () => {
                           <BsStarHalf></BsStarHalf>
                         </div>
                       </div>
+          </div>
+
+
+
+
                       <p>now available {available_quantity}</p>
+            <p className="">Price: ${price}</p>
+
+                      <p>{description}</p>
           <div className="modal-action">
             <label htmlFor="my-modal-6" className="btn bg-pink-700 font-bold hover:bg-pink-800">
               Got it!

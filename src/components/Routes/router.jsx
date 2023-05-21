@@ -49,7 +49,7 @@ const router = createBrowserRouter([
             element: <PrivetRoute><MyToys></MyToys></PrivetRoute>
         },
         {
-            path: '/edit/:id',
+            path: '/update/:id',
             element: <UpdateToy></UpdateToy>,
             loader: ({params}) => fetch(`https://toy-hero-server.vercel.app/details/${params.id}`)
         },

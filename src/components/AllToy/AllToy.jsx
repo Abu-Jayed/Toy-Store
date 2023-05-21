@@ -1,6 +1,7 @@
 import { useState } from "react";
-import { Link, useLoaderData } from "react-router-dom";
+import { Link, useLoaderData, useNavigate } from "react-router-dom";
 import useTitle from "../Shared/hook/useTitle";
+import Swal from "sweetalert2";
 
 const AllToy = () => {
   useTitle('All Toy')
@@ -8,6 +9,8 @@ const AllToy = () => {
   console.log(data);
   const [toys,setToys] = useState(data)
   const [searchText,setSearchText] = useState('')
+  const navigate = useNavigate()
+
 
   const handleSearch = () => {
     fetch(`https://toy-hero-server.vercel.app/getToyByName/${searchText}`)
@@ -20,15 +23,29 @@ const AllToy = () => {
   };
 
 
+
+  const handleViewDetails = id => {
+      navigate(`/details/${id}`)
+      Swal.fire({
+        position: "top-center",
+        icon: "success",
+        title: "Toy details data loaded successfully",
+        showConfirmButton: false,
+        timer: 2500,
+      });
+  };
+
+
+
   return (
-    <div className="overflow-x-auto w-full">
+    <div className="overflow-x-scroll ">
       {/* search input field start here */}
 
       <div className="form-control">
-  <div className="input-group">
+  <div className="input-group  md:mt-10 md:mb-16">
     <input 
     onChange={(e) => setSearchText(e.target.value)}
-     type="text" placeholder="Search…" className="input input-bordered" />
+     type="text" placeholder="Search by name" className="input input-bordered" />
     <button 
     onClick={handleSearch}
      className="btn btn-square">
@@ -38,18 +55,20 @@ const AllToy = () => {
 </div>
 
       {/* search input field start end */}
-  <table className="table w-full">
+  <table className="mx-auto w-full table border-4">
     {/* head */}
     <thead>
-      <tr>
+      <tr >
         
-        <th>Name</th>
-        <th>Job</th>
-        <th>Favorite Color</th>
-        <th></th>
+        <th className="text-lg">Name</th>
+        <th className="text-lg">Price</th>
+        <th className="text-lg">Quantity</th>
+        <th className="text-lg">----</th>
+        <th className="text-lg">Seller</th>
+        {/* <th className="text-lg"></th> */}
       </tr>
     </thead>
-    <tbody>
+    <tbody className="w-96">
       {
         toys.map(toy =>{
           return <tr key={toy._id}>
@@ -69,16 +88,20 @@ const AllToy = () => {
           </td>
           <td>
             {toy.price}
-            <br/>
-            <span className="badge badge-ghost badge-sm">{toy.available_quantity} available</span>
           </td>
-          <th>
-            <button className="btn btn-ghost btn-xs">
-              <Link to={`/details/${toy._id}`}>
+          <td>
+            {toy.available_quantity}
+          </td>
+          <td>
+            <button 
+            onClick={()=>handleViewDetails(toy._id)}
+             className="btn btn-ghost btn-xs">
               details
-              </Link>
               </button>
-          </th>
+          </td>
+          <td>
+            {toy.postedBy? toy.postedBy: 'not available'}
+          </td>
         </tr>
         })
       }

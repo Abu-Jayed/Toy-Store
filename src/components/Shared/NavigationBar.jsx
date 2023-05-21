@@ -47,6 +47,11 @@ const NavigationBar = () => {
             >
               <li>
               <Link to='/'>
+              <p className="text-4xl">Toy Hero</p>
+              </Link>
+            </li>
+              <li>
+              <Link to='/'>
               <p>Home</p>
               </Link>
             </li>
@@ -79,7 +84,7 @@ const NavigationBar = () => {
             <img src={logo} className="w-12 h-12" alt="" />
           </Link>
           <Link to="/">
-            <p className="font-bold text-4xl">Toy-Hero</p>
+            <p className="font-bold opacity-0 md:opacity-100 md:text-4xl ml-1">Toy-Hero</p>
           </Link>
         </div>
         <div className="navbar-center hidden lg:flex ">
@@ -118,8 +123,8 @@ const NavigationBar = () => {
           {user ? (
             <>
             &nbsp;
-            <Link onClick={handleLogOut} className="btn btn-warning  text-white font-serif text-xl">
-            <button>Logout</button>
+            <Link onClick={handleLogOut} className="btn btn-warning  text-white w-[73px] md:w-auto font-serif md:text-xl">
+            <button className="">Logout</button>
           </Link>
             </>
           ) : (

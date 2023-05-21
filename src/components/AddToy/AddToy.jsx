@@ -18,7 +18,7 @@ const AddToy = () => {
     formState: { errors },
   } = useForm();
   const onSubmit = (data) => {
-    data.skills = selectedOption;
+    // data.skills = selectedOption;
 
     fetch("https://toy-hero-server.vercel.app/addToy", {
       method: "POST",
@@ -39,22 +39,12 @@ const AddToy = () => {
       });
     console.log(data);
   };
-  // const options = [
-  //   { value: "JavaScript", label: "JavaScript" },
-  //   { value: "C++", label: "C++" },
-  //   { value: "HTML", label: "HTML" },
-  //   { value: "CSS", label: "CSS" },
-  //   { value: "React", label: "React" },
-  //   { value: "Node", label: "Node" },
-  //   { value: "MongoDB", label: "MongoDB" },
-  //   { value: "Redux", label: "Redux" },
-  // ];
-  //   console.log(user);
+  console.log(user);
   return (
-    <div className="border border-red-600">
+    <div className="">
       <div className="text-center">
-        <div className=" border-4 ">
-          <form className="grid grid-cols-2 gap-2 w-1/2 md:mx-auto" onSubmit={handleSubmit(onSubmit)}>
+        <div className="  ">
+          <form className="mt-8 rounded-lg px-20 py-5 shadow-inner shadow-red-600 grid grid-cols-2 gap-2 w-[70%] md:mx-auto" onSubmit={handleSubmit(onSubmit)}>
 
             {/* copy code of input start */}
             <div className="form-control">
@@ -186,6 +176,22 @@ const AddToy = () => {
                 required
               />
             </div>
+            <div className="form-control">
+              <label className="label">
+                <span className="text-black font-semibold tracking-wider">
+                  Seller name
+                </span>
+              </label>
+              <input
+                value={user?.displayName}
+                {...register("sellerName")}
+                placeholder="your email"
+                type="email"
+
+                className="block input input-bordered input-primary w-full max-w-xs"
+                required
+              />
+            </div>
 
             {/* email end */}
             
@@ -209,7 +215,7 @@ const AddToy = () => {
             {/* description end */}
             
             <input
-              className="mt-2 btn btn-warning"
+              className="mt-2 btn btn-warning text-gray-100 font-bold text-2xl hover:bg-rose-600 bg-rose-500"
               value="Add Toy"
               type="submit"
             />

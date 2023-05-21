@@ -7,7 +7,7 @@ import { useEffect } from "react";
 
 import { AuthContext } from "../AuthProvider/AuthProvider";
 import UpdateToy from "../UpdateToy/UpdateToy";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import useTitle from "../Shared/hook/useTitle";
 import { Toaster, toast } from "react-hot-toast";
 import Swal from "sweetalert2";
@@ -17,6 +17,7 @@ const MyToys = () => {
   const { user } = useContext(AuthContext);
   const [toys, setToys] = useState([]);
   const [searchText, setSearchText] = useState("");
+  const navigate = useNavigate()
 
   const [grow, setGrow] = useState("yes");
   const handleGrow = (agree) => {
@@ -81,6 +82,17 @@ const MyToys = () => {
     /* swal confirmation end */
   };
   /* delete code end here */
+
+  const handleUpdateToy = (id) =>{
+    navigate(`/update/${id}`)
+      Swal.fire({
+        position: "top-center",
+        icon: "success",
+        title: "Now you can update your toy",
+        showConfirmButton: false,
+        timer: 2500,
+      });
+  }
 
   return (
     <div>
@@ -178,9 +190,14 @@ const MyToys = () => {
                   </td>
                   <td>
                     {/* <button>Update</button> */}
-                    <Link to={`/edit/${toy._id}`}>
+                    {/* <Link to={`/update/${toy._id}`}>
                       <button>Update</button>
-                    </Link>
+                    </Link> */}
+                    <button 
+            onClick={()=>handleUpdateToy(toy._id)}
+             className="btn btn-ghost btn-xs">
+              Update
+              </button>
                   </td>
                   <td>
                     <button onClick={() => handleDelete(toy._id)}>
