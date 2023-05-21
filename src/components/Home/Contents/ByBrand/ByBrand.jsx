@@ -17,7 +17,7 @@ const ByBrand = () => {
 
   return (
     <div data-aos="fade-up">
-      <div className={ `  border-4 rounded-[30px] md:mt-32 mt-8 md:relative`}>
+      <div className={ `  border-4 rounded-[30px] md:mt-20 mt-8 md:relative`}>
         <p className="text-3xl font-bold md:absolute md:left-32 -top-5 bg-white px-3 italic">
           shop by brand
         </p>
@@ -132,8 +132,17 @@ const ByBrand = () => {
         </div>
         {/* 2nd floor end */}
 
-        <button onClick={() => setShow(!show)} className="mt-10 btn btn-warning">Left</button>
-        <button onClick={() => setShow(!show)} className="btn btn-warning">Right</button>
+        <div className=" px-10 mb-2 mt-8 flex items-center justify-between">
+          <button
+            onClick={() => setShow(!show)}
+            className="rounded-full bg-rose-500 px-3 py-1 text-3xl text-white font-bold"
+          >
+            &lt;
+          </button>
+          <button onClick={() => setShow(!show)} className="rounded-full bg-rose-500 px-3 py-1 text-3xl text-white font-bold">
+            &gt;
+          </button>
+        </div>
  
       </div>
     </div>

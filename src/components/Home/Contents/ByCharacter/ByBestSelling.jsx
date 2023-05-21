@@ -12,14 +12,14 @@ import cha10 from '../../../../assets/img/cha10.jpg'
 
 import { useState } from "react";
 
-const ByCharacter = () => {
+const ByBestSelling = () => {
     const [show,setShow] = useState(false)
 
   return (
     <div data-aos="fade-up">
-      <div className={ `  -4 rounded-[30px] md:mt-32 mt-8 md:relative`}>
-        <p className="text-3xl font-bold md:absolute md:left-32 -top-5 bg-white px-3 italic">
-          Most selling charector
+      <div className={ `  md:mt-32 mt-8 md:relative`}>
+        <p className="rounded-lg text-3xl font-bold md:absolute md:left-32 -top-5 bg-white px-3 italic">
+          Most selling character
         </p>
         {/* 1st floor start */}
         <div className={`ml-32 md:ml-0 absolute md:left-[52px] ${show?'visible':'invisible'} py-10 rounded-3xl  md:flex md:gap-5 justify-center `}>
@@ -132,12 +132,21 @@ const ByCharacter = () => {
         </div>
         {/* 2nd floor end */}
 
-        <button onClick={() => setShow(!show)} className="mt-10 btn btn-warning">Left</button>
-        <button onClick={() => setShow(!show)} className="btn btn-warning">Right</button>
+        <div className=" px-10 mb-2 mt-8 flex items-center justify-between">
+          <button
+            onClick={() => setShow(!show)}
+            className="rounded-full bg-cyan-800 px-3 py-1 text-3xl text-white font-bold"
+          >
+            &lt;
+          </button>
+          <button onClick={() => setShow(!show)} className="rounded-full bg-cyan-800 px-3 py-1 text-3xl text-white font-bold">
+            &gt;
+          </button>
+        </div>
  
       </div>
     </div>
   );
 };
 
-export default ByCharacter;
+export default ByBestSelling;

@@ -6,11 +6,10 @@ import Discount from "../Contents/Discount.jsx/Discount";
 import Gallery from "../Contents/Gallery/Gallery";
 import Slider from "../Contents/Slider/Slider";
 import ByAge from "../Contents/ByAge/ByAge";
-import ByCategory from "../Contents/ByCategory/ByCategory";
+import ByCategory from "../Contents/ByCategory/ByCharecters";
 import useTitle from "../../Shared/hook/useTitle";
-import SummerToy from "../Contents/SummerToy/SummerToy";
 import ByBrand from "../Contents/ByBrand/ByBrand";
-import ByCharacter from "../Contents/ByCharacter/ByCharacter";
+import ByBestSelling from "../Contents/ByCharacter/ByBestSelling";
 
 const Home = () => {
   useTitle("Home");
@@ -26,7 +25,7 @@ const Home = () => {
       <ByBrand></ByBrand>
       <div className="divBg">
         <div>
-          <ByCharacter></ByCharacter>
+          <ByBestSelling></ByBestSelling>
         </div>
       </div>
       {/* <SummerToy></SummerToy> */}

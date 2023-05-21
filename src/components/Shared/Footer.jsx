@@ -3,10 +3,10 @@ import logo from "../../assets/Toy-Hero-Logo.jpeg";
 const Footer = () => {
   return (
     <div className="relative">
-      <div className="absolute w-full top-28">
+      <div className="absolute w-full top-28 ">
         {/* Footer code start from here */}
-        <footer className="footer p-10 bg-base-200 text-base-content">
-          <div>
+        <footer className="footer p-10 bg-base-200 text-base-content ">
+          <div className="md:ml-0 ml-20">
             <span className="text-2xl font-bold text-black">Shop toys</span>
             <a className="link link-hover">Action toys</a>
             <a className="link link-hover">Construction</a>
@@ -14,7 +14,7 @@ const Footer = () => {
             <a className="link link-hover">Pre School</a>
             <a className="link link-hover">Toy Hero Exclusive</a>
           </div>
-          <div>
+          <div className="md:ml-0 ml-20">
             <span className="text-2xl font-bold text-black">Shop by age</span>
             <a className="link link-hover">0-11 Months</a>
             <a className="link link-hover">1-2 years</a>
@@ -23,14 +23,14 @@ const Footer = () => {
             <a className="link link-hover">7-9 years</a>
             <a className="link link-hover">Older Kids</a>
           </div>
-          <div>
+          <div className="md:ml-0 ml-20">
             <span className="text-2xl font-bold text-black">Toy Hero</span>
             <a className="link link-hover">Toy Hero History</a>
             <a className="link link-hover">Careers at Toy Hero</a>
             <a className="link link-hover">Supplier Transparency</a>
             <a className="link link-hover">Refound Policy</a>
           </div>
-          <div>
+          <div className="md:ml-0 ml-20">
             <span className="text-2xl font-bold text-black">Support</span>
             <a className="link link-hover">Helpdesk</a>
             <a className="link link-hover">FAQ's</a>

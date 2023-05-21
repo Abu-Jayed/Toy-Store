@@ -10,18 +10,22 @@ import cat9 from "../../../../assets/img/cat9.png";
 import cat10 from "../../../../assets/img/cat10.png";
 import { useState } from "react";
 
-const ByCategory = () => {
-    const [show,setShow] = useState(false)
+const ByCharecters = () => {
+  const [show, setShow] = useState(false);
 
   return (
     <div data-aos="fade-up">
       <h1></h1>
-      <div className={ `  border-4 rounded-[30px] md:mt-32 mt-8 md:relative`}>
+      <div className={`  border-4 rounded-[30px] md:mt-20 mt-8 md:relative`}>
         <p className="text-3xl font-bold md:absolute md:left-32 -top-5 bg-white px-3 italic">
-          shop by Charector
+          shop by Character
         </p>
         {/* 1st floor start */}
-        <div className={`absolute md:left-[52px] ${show?'visible':'invisible'} py-10 rounded-3xl ml-32 md:ml-0 md:flex md:gap-5 justify-center `}>
+        <div
+          className={`absolute md:left-[52px] ${
+            show ? "visible" : "invisible"
+          } py-10 rounded-3xl ml-32 md:ml-0 md:flex md:gap-5 justify-center `}
+        >
           <div className="bg-rose-400  w-48 h-60 rounded-xl flex justify-center ">
             <div className="mt-3">
               <img className="rounded-xl w-[167px] h-[157]" src={cat1} alt="" />
@@ -65,7 +69,11 @@ const ByCategory = () => {
         </div>
 
         {/* 2nd floor start */}
-        <div className={`${show?'invisible':'visible'}  top-6 md:top-9 relative ml-32 md:ml-0 `}>
+        <div
+          className={`${
+            show ? "invisible" : "visible"
+          }  top-6 md:top-9 relative ml-32 md:ml-0 `}
+        >
           <div className=" py-1 rounded-3xl  md:flex md:gap-5 justify-center">
             <div className=" bg-pink-700 border shadow-lg mb-6 w-48 h-60 rounded-xl flex justify-center ">
               <div className="mt-3">
@@ -131,12 +139,20 @@ const ByCategory = () => {
         </div>
         {/* 2nd floor end */}
 
-        <button onClick={() => setShow(!show)} className="mt-10 btn btn-warning">Left</button>
-        <button onClick={() => setShow(!show)} className="btn btn-warning">Right</button>
- 
+        <div className=" px-10 mb-2 mt-8 flex items-center justify-between">
+          <button
+            onClick={() => setShow(!show)}
+            className="rounded-full bg-rose-500 px-3 py-1 text-3xl text-white font-bold"
+          >
+            &lt;
+          </button>
+          <button onClick={() => setShow(!show)} className="rounded-full bg-rose-500 px-3 py-1 text-3xl text-white font-bold">
+            &gt;
+          </button>
+        </div>
       </div>
     </div>
   );
 };
 
-export default ByCategory;
+export default ByCharecters;

@@ -5,6 +5,7 @@ import { Link, redirect, useNavigate } from "react-router-dom";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
 import { AuthContext } from "../../../AuthProvider/AuthProvider";
+import Swal from "sweetalert2";
 
 const Category = () => {
   const [marvel, setMarvel] = useState([]);
@@ -20,6 +21,28 @@ const Category = () => {
       setMarvel(data)
     })
   },[])
+  const handleLoadDefaultDc = () =>{
+
+      fetch(`https://toy-hero-server.vercel.app/allToy/DC/Hero`)
+      .then(res => res.json())
+      .then(data => {
+        setMarvel(data)
+      })
+  }
+  const handleLoadDefaultMarvel =() =>{
+    fetch(`https://toy-hero-server.vercel.app/allToy/Marvel/Hero`)
+      .then(res => res.json())
+      .then(data => {
+        setMarvel(data)
+      })
+  }
+  const handleLoadDefaultHarry = () =>{
+    fetch(`https://toy-hero-server.vercel.app/allToy/Harry/Hero`)
+      .then(res => res.json())
+      .then(data => {
+        setMarvel(data)
+      })
+  }
 
   const handleCheck = (type) => {
     fetch(`https://toy-hero-server.vercel.app/allToy/Marvel/${type}`)
@@ -33,6 +56,7 @@ const Category = () => {
   };
 
   /* DC Charector */
+  
   const handleDCCharector = (type) => {
     fetch(`https://toy-hero-server.vercel.app/allToy/DC/${type}`)
       .then((res) => res.json())
@@ -70,19 +94,26 @@ const Category = () => {
 
     }else{
       navigate(`/details/${id}`)
+      Swal.fire({
+        position: "top-center",
+        icon: "success",
+        title: "Toy details data loaded successfully",
+        showConfirmButton: false,
+        timer: 2500,
+      });
     }
   }
 
   return (
     <div data-aos="fade-up">
-      <h1 className=" text-5xl font-bold hover:bg-rose-600 rounded-2xl mx-auto py-4 w-[700px] hover:text-white hover:rotate-2 ease-in duration-200 text-center mt-28 text-black">Shop By Category
+      <h1 className=" text-5xl font-bold bg-rose-200 hover:bg-rose-600 rounded-2xl mx-auto py-4 md:w-[700px] hover:text-white hover:rotate-2 ease-in duration-200 text-center mt-28 text-gray-800 mb-5">Shop By Category
       
       </h1>
       <Tabs>
         <TabList onClick={handleSolveIssue}>
-          <Tab>Marvel</Tab>
-          <Tab>DC</Tab>
-          <Tab>Harry Potter</Tab>
+          <Tab onClick={()=>handleLoadDefaultMarvel()}>Marvel</Tab>
+          <Tab onClick={()=>handleLoadDefaultDc()}>DC</Tab>
+          <Tab onClick={()=>handleLoadDefaultHarry()}>Harry Potter</Tab>
         </TabList>
 
         {/* sub category 1 start  */}
@@ -129,7 +160,7 @@ const Category = () => {
             </TabPanel>
 
             <TabPanel>
-              <div className="flex gap-4">
+              <div className="md:grid flex flex-col md:grid-cols-3 gap-4">
                 {marvel?.map((hero) => {
                   return (
                     <div
@@ -163,7 +194,7 @@ const Category = () => {
             </TabPanel>
 
             <TabPanel>
-              <div className="flex gap-4">
+              <div className="md:grid flex flex-col md:grid-cols-3 gap-4">
                 {marvel?.map((hero) => {
                   return (
                     <div
@@ -210,7 +241,7 @@ const Category = () => {
             </TabList>
 
             <TabPanel>
-              <div className="flex gap-4">
+              <div className="md:grid flex flex-col md:grid-cols-3 gap-4">
                 {marvel?.map((hero) => {
                   return (
                     <div
@@ -244,7 +275,7 @@ const Category = () => {
             </TabPanel>
 
             <TabPanel>
-              <div className="flex gap-4">
+              <div className="md:grid flex flex-col md:grid-cols-3 gap-4">
                 {marvel?.map((hero) => {
                   return (
                     <div
@@ -277,7 +308,7 @@ const Category = () => {
               </div>
             </TabPanel>
             <TabPanel>
-              <div className="flex gap-4">
+              <div className="md:grid flex flex-col md:grid-cols-3 gap-4">
                 {marvel?.map((hero) => {
                   return (
                     <div
@@ -324,7 +355,7 @@ const Category = () => {
             </TabList>
 
             <TabPanel>
-              <div className="flex gap-4">
+              <div className="md:grid flex flex-col md:grid-cols-3 gap-4">
                 {marvel?.map((hero) => {
                   return (
                     <div
@@ -358,7 +389,7 @@ const Category = () => {
             </TabPanel>
 
             <TabPanel>
-              <div className="md:flex gap-4">
+              <div className="md:grid flex flex-col md:grid-cols-3 gap-4">
                 {marvel?.map((hero) => {
                   return (
                     <div
@@ -391,7 +422,7 @@ const Category = () => {
               </div>
             </TabPanel>
             <TabPanel>
-              <div className="flex gap-4">
+              <div className="md:grid flex flex-col md:grid-cols-3 gap-4">
                 {marvel?.map((hero) => {
                   return (
                     <div
