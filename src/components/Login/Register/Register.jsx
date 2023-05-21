@@ -51,28 +51,29 @@ useTitle('Register')
 
   return (
     <>
-      <div className="text-black md:w-[666px] mx-auto rounded-3xl bg-orange-900 p-10 mb-14 mt-14">
-        <h3 className="text-center text-cyan-300 text-3xl font-bold tracking-wide mb-5">
-          Register to your account
+      <div className="text-black md:w-[666px] mx-auto rounded-3xl  p-10 mb-14 mt-14  shadow-inner shadow-red-600">
+        <h3 className="text-center text-red-600 text-5xl font-bold tracking-wide mb-10">
+          Register your account
         </h3>
+        <hr className="w-96  h-[1px] mx-auto my-2 bg-gray-100 border-0 rounded md:my-10 dark:bg-gray-700"></hr>
         <form onSubmit={handleRegister} className="w-96 mx-auto" >
           <div className="form-control">
-            <label className="label">
-              <span className="text-gray-50 font-semibold tracking-wider">
-                Name
-              </span>
-            </label>
+          <label className="label">
+                <span className="text-black font-semibold tracking-wider">
+                  name
+                </span>
+              </label>
             <input
               type="text"
               name="name"
               placeholder="name"
-              className="input input-bordered"
+              className="input input-bordered  border-rose-300 focus:outline-red-600"
               required
             />
           </div>
           <div className="form-control">
             <label className="label">
-              <span className="text-gray-50 font-semibold tracking-wider">
+              <span className="text-black font-semibold tracking-wider">
                 Image Url
               </span>
             </label>
@@ -80,13 +81,13 @@ useTitle('Register')
               type="text"
               name="img"
               placeholder="Image Url"
-              className="input input-bordered"
+              className="input input-bordered border-rose-300 focus:outline-red-600"
               required
             />
           </div>
           <div className="form-control">
             <label className="label">
-              <span className="text-gray-50 font-semibold tracking-wider">
+              <span className="text-black font-semibold tracking-wider">
                 Email
               </span>
             </label>
@@ -94,13 +95,13 @@ useTitle('Register')
               type="email"
               name="email"
               placeholder="email"
-              className="input input-bordered"
+              className="input input-bordered border-rose-300 focus:outline-red-600"
               required
             />
           </div>
           <div className="form-control">
             <label className="label">
-              <span className="text-gray-50 font-semibold tracking-wider">
+              <span className="text-black font-semibold tracking-wider">
                 Password
               </span>
             </label>
@@ -108,14 +109,14 @@ useTitle('Register')
               type="password"
               name="password"
               placeholder="password"
-              className="input input-bordered"
+              className="input input-bordered border-rose-300 focus:outline-red-600"
               required
             />
             <label className="label">
-              <div className="text-gray-100 tracking-wide  flex gap-12">
+              <div className="text-rose-500 text-xl font-bold tracking-wide  flex gap-12">
                 <div className="flex">
                   <p className="mr-1">Have an account?</p>
-                  <Link className="underline" to="/login">
+                  <Link className="underline text-red-600" to="/login">
                     {" "}
                     Login
                   </Link>
@@ -132,8 +133,8 @@ useTitle('Register')
               <span className="text-white">Remember me</span>
             </label>
           </div>
-          <div className="form-control mt-6 mb-3">
-            <button className="btn btn-warning">Register</button>
+          <div className="w-60 mx-auto form-control mt-6 mb-3">
+            <button className="btn bg-rose-500 hover:bg-rose-600 font-bold text-xl">Register</button>
           </div>
         </form>
         <h1 className="text-3xl text-center font-semibold uppercase text-red-600">

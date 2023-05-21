@@ -43,7 +43,7 @@ const NavigationBar = () => {
             </label>
             <ul
               tabIndex={0}
-              className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
+              className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-rose-600 text-white rounded-box w-52"
             >
               <li>
               <Link to='/'>
@@ -82,11 +82,11 @@ const NavigationBar = () => {
             <p className="font-bold text-4xl">Toy-Hero</p>
           </Link>
         </div>
-        <div className="navbar-center hidden lg:flex">
+        <div className="navbar-center hidden lg:flex ">
           <ul className="menu menu-horizontal px-1">
             <li>
               <Link to='/'>
-              <p>Home</p>
+              <p className="">Home</p>
               </Link>
             </li>
             <li>
@@ -118,7 +118,7 @@ const NavigationBar = () => {
           {user ? (
             <>
             &nbsp;
-            <Link onClick={handleLogOut} className="btn btn-info">
+            <Link onClick={handleLogOut} className="btn btn-warning  text-white font-serif text-xl">
             <button>Logout</button>
           </Link>
             </>

@@ -119,7 +119,7 @@ const Category = () => {
                           <BsStarHalf></BsStarHalf>
                         </div>
                       </div>
-                      <button onClick={()=>handleViewDetails(hero._id)} className="">
+                      <button onClick={()=>handleViewDetails(hero._id)} className=" btn btn-warning bg-rose-500 font-semibold hover:bg-rose-600 text-white">
                         View Detail
                       </button>
                     </div>
@@ -234,7 +234,7 @@ const Category = () => {
                           <BsStarHalf></BsStarHalf>
                         </div>
                       </div>
-                      <button onClick={()=>handleViewDetails(hero._id)} className=" btn-warning bg-rose-500 font-semibold hover:bg-rose-600 text-white">
+                      <button onClick={()=>handleViewDetails(hero._id)} className="  btn btn-warning bg-rose-500 font-semibold hover:bg-rose-600 text-white">
                         View Details
                       </button>
                     </div>
@@ -268,7 +268,7 @@ const Category = () => {
                           <BsStarHalf></BsStarHalf>
                         </div>
                       </div>
-                      <button onClick={()=>handleViewDetails(hero._id)} className=" btn btn-warning bg-rose-500 font-semibold hover:bg-rose-600 text-white">
+                      <button onClick={()=>handleViewDetails(hero._id)} className="  btn btn-warning bg-rose-500 font-semibold hover:bg-rose-600 text-white">
                         View Details
                       </button>
                     </div>
@@ -301,7 +301,7 @@ const Category = () => {
                           <BsStarHalf></BsStarHalf>
                         </div>
                       </div>
-                      <button onClick={()=>handleViewDetails(hero._id)} className=" btn btn-warning bg-rose-500 font-semibold hover:bg-rose-600 text-white">
+                      <button onClick={()=>handleViewDetails(hero._id)} className="  btn btn-warning bg-rose-500 font-semibold hover:bg-rose-600 text-white">
                         View Details
                       </button>
                     </div>
@@ -348,7 +348,7 @@ const Category = () => {
                           <BsStarHalf></BsStarHalf>
                         </div>
                       </div>
-                      <button onClick={()=>handleViewDetails(hero._id)} className=" btn btn-warning bg-rose-500 font-semibold hover:bg-rose-600 text-white">
+                      <button onClick={()=>handleViewDetails(hero._id)} className="  btn btn-warning bg-rose-500 font-semibold hover:bg-rose-600 text-white ">
                         View Details
                       </button>
                     </div>
@@ -382,7 +382,7 @@ const Category = () => {
                           <BsStarHalf></BsStarHalf>
                         </div>
                       </div>
-                      <button onClick={()=>handleViewDetails(hero._id)} className=" btn btn-warning bg-rose-500 font-semibold hover:bg-rose-600 text-white">
+                      <button onClick={()=>handleViewDetails(hero._id)} className="  btn btn-warning bg-rose-500 font-semibold hover:bg-rose-600 text-white">
                         View Details
                       </button>
                     </div>
@@ -415,7 +415,7 @@ const Category = () => {
                           <BsStarHalf></BsStarHalf>
                         </div>
                       </div>
-                      <button onClick={()=>handleViewDetails(hero._id)} className=" btn btn-warning bg-rose-500 font-semibold hover:bg-rose-600 text-white">
+                      <button onClick={()=>handleViewDetails(hero._id)} className="  btn btn-warning bg-rose-500 font-semibold hover:bg-rose-600 text-white">
                         View Details
                       </button>
                     </div>
