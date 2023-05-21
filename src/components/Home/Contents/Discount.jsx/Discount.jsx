@@ -5,9 +5,9 @@ const Discount = () => {
   return (
     <div>
       {/* discount offer carousel start */}
-      <div className="carousel w-full">
+      <div className="carousel w-full mt-2">
         {/* slider 1 start */}
-        <div id="slide1" className="carousel-item relative bg-red-200  w-full">
+        <div id="slide1" className="carousel-item relative bg-gray-200  w-full">
           {/* <img
             src="/images/stock/photo-1625726411847-8cbb60cc71e6.jpg"
             className="w-full"
@@ -41,7 +41,7 @@ const Discount = () => {
 
         {/* slider 2 start */}
 
-        <div id="slide2" className="carousel-item relative bg-red-200 w-full">
+        <div id="slide2" className="carousel-item relative bg-gray-200 w-full">
           <div className="flex gap-20 items-center h-20 md:px-0 px-10 md:mx-auto">
             
             <div>
@@ -75,7 +75,7 @@ const Discount = () => {
 
         {/* slider 3 start */}
 
-        <div id="slide3" className="carousel-item relative bg-red-200 w-full">
+        <div id="slide3" className="carousel-item relative bg-gray-200 w-full">
           {/* <img
             src="/images/stock/photo-1414694762283-acccc27bca85.jpg"
             className="w-full"
