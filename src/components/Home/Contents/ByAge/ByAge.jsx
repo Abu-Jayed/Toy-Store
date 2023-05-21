@@ -13,7 +13,7 @@ const ByAge = () => {
   return (
     <div
       data-aos="fade-down"
-      className="border-4 rounded-[30px] md:mt-32 mt-8 md:relative"
+      className="border-4 rounded-[30px] md:mt-32 mt-8 md:relative relative"
     >
       <p className="text-3xl font-bold md:absolute md:left-32 -top-5 bg-white px-3 italic">
         shop by age
@@ -69,7 +69,7 @@ const ByAge = () => {
 
 
       {/* 1st floor start */}
-      <div className=" absolute top-0 left-[50px] py-10 rounded-3xl  md:flex md:gap-5 justify-center">
+      <div className=" md:absolute md:top-0 md:left-[50px] md:py-10 md:rounded-3xl  md:flex md:gap-5 md:justify-center absolute top-[85px]">
         <div className="hover:opacity-0  bg-pink-300  w-48 h-60 rounded-xl flex justify-center ">
           <div className="mt-3">
             <img className="rounded-xl w-[167px] h-[157]" src={img1} alt="" />
