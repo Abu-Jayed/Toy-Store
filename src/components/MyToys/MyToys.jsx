@@ -105,10 +105,10 @@ const MyToys = () => {
             className="p-1"
           />{" "}
           <button className="btn btn-warning" onClick={() => handleGrow(true)}>
-            Decrese
+          descending
           </button>
           <button className="btn btn-info" onClick={() => handleGrow(false)}>
-            Acces
+          ascending
           </button>
         </div>
         {/* <table className="container">
