@@ -10,6 +10,7 @@ import ByCategory from "../Contents/ByCategory/ByCharecters";
 import useTitle from "../../Shared/hook/useTitle";
 import ByBrand from "../Contents/ByBrand/ByBrand";
 import ByBestSelling from "../Contents/ByCharacter/ByBestSelling";
+import FavouriteCategory from "../Contents/FaveriteCategory/FavouriteCategory";
 
 const Home = () => {
   useTitle("Home");
@@ -23,6 +24,7 @@ const Home = () => {
       <ByAge></ByAge>
       <ByCategory></ByCategory>
       <ByBrand></ByBrand>
+      <FavouriteCategory></FavouriteCategory>
       <div className="divBg">
         <div>
           <ByBestSelling></ByBestSelling>
