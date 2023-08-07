@@ -1,6 +1,7 @@
 
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
+import { BsHeart, BsHeartFill, BsHeartPulse, BsHeartPulseFill, } from "react-icons/bs";
 
 import top_img1 from "../../../../assets/img/top_of_year/top_1.webp"
 import top_img2 from "../../../../assets/img/top_of_year/top_2.webp"
@@ -142,25 +143,47 @@ const BestOfYear = () => {
 
 
         {
-          toy.map((toy,i)=>{
-            return <div key={i} className=' w-[240px] '>
-              <div className='border-2 border-amber-500 '>
-                <div className='h-20  border-4 border-red-600'>
+          toy.map((toy, i) => {
+            return <div key={i} className='text-black w-[275px] '>
+              <div className='border- h-[570px] border-amber-500 '>
+                <div className='h-20  border4 border-red-600'>
                   <div className='py-5  text-center'>
-            <span className={`uppercase  px-4  py-2 rounded-lg bg-none text-white ${toy.extraInfo == false ? "opacity-0":"bg-[#ac9156]"} ${toy.extraInfo === "All Time Best Sell" ? "bg-red-600":""} ${toy.extraInfo === "EXCLUSIVE ONLY RETAILER" ? "bg-red-600":""}`}>{toy.extraInfo}</span>
+                    <span className={`uppercase  px-4  py-2 rounded-lg bg-none text-white ${toy.extraInfo == false ? "opacity-0" : "bg-[#ac9156]"} ${toy.extraInfo === "All Time Best Sell" ? "bg-red-600" : ""} ${toy.extraInfo === "EXCLUSIVE ONLY RETAILER" ? "bg-red-600" : ""}`}>{toy.extraInfo}</span>
                   </div>
                 </div>
                 <div className=''>
-              <img className='text-center border-4' src={toy.img} alt="" />
+                  <img className='text-center border-' src={toy.img} alt="" />
                 </div>
-                <div className='h-40 border-4 border-green-700'>
+                <div className='h-40 border- border-green-'>
+                  <h2 className='text-xl font-bold'>{toy.name}</h2>
+                  <h4 className='hover:underline cursor-pointer  '>{toy.subName}</h4>
+                  <h1 className='text-2xl font-bold mt-2  '>${toy.price}</h1>
+
+                  <div className='flex gap-3'>
+
+                  <div className="mb-4 mt-4 ml-4 cursor-pointer flex">
+                    <span className=" px-[38px] py-[6px] border-  border-red-600 rounded-xl  bg-[#cf102d] text-white font-semibold text-[] ">Add To Bag</span>
+                  </div>
+
+                    <div className='cursor-pointer flex justify-center items-center mt-2 relative'>
+
+                      <div className='hover:opacity-0'>
+                        <BsHeart className='w-[30px] h-[30px] fill-red-700 '></BsHeart>
+                      </div>
+
+                      <div className='absolute opacity-5  hover:opacity-100'>
+                        <BsHeartFill className=' w-[30px] h-[30px] fill-white   hover:fill-red-700 hover:visible '></BsHeartFill>
+                      </div>
+
+                    </div>
+                  </div>
 
                 </div>
               </div>
-              </div>
+            </div>
           })
         }
-      
+
       </Carousel>
 
 
