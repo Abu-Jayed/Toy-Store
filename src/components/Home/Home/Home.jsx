@@ -11,6 +11,8 @@ import useTitle from "../../Shared/hook/useTitle";
 import ByBrand from "../Contents/ByBrand/ByBrand";
 import ByBestSelling from "../Contents/ByCharacter/ByBestSelling";
 import FavouriteCategory from "../Contents/FaveriteCategory/FavouriteCategory";
+import BestOfYear from "../Contents/BestOfYear/BestOfYear";
+import SummerToy from "../Contents/SummerToy/SummerToy";
 
 const Home = () => {
   useTitle("Home");
@@ -30,6 +32,7 @@ const Home = () => {
           <ByBestSelling></ByBestSelling>
         </div>
       </div>
+      <BestOfYear></BestOfYear>
       {/* <SummerToy></SummerToy> */}
       <div className='grid md:grid-cols-2 mt-20'>
         <div className=' mx-auto'>

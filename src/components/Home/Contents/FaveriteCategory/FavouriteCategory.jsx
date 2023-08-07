@@ -10,6 +10,7 @@ import fav_cat_8 from "../../../../assets/img/Fav_Cat/Fav_Cat_8.webp"
 import { useState } from "react"
 
 
+
 const FavouriteCategory = () => {
 
   const data = [

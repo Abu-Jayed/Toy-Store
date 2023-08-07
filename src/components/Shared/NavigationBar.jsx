@@ -47,7 +47,7 @@ const NavigationBar = () => {
             >
               <li>
               <Link to='/'>
-              <p className="text-4xl">Toy Hero</p>
+              <p className="text-4xl">Toytopia</p>
               </Link>
             </li>
               <li>
@@ -84,7 +84,7 @@ const NavigationBar = () => {
             <img src={logo} className="w-12 h-12" alt="" />
           </Link>
           <Link to="/">
-            <p className="font-bold opacity-0 md:opacity-100 md:text-4xl ml-1">Toy-Hero</p>
+            <p className="font-bold opacity-0 md:opacity-100 md:text-4xl ml-1">Toytopia</p>
           </Link>
         </div>
         <div className="navbar-center hidden lg:flex ">
