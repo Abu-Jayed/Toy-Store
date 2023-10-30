@@ -3,14 +3,14 @@ import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import { BsHeart, BsHeartFill, BsHeartPulse, BsHeartPulseFill, } from "react-icons/bs";
 
-import top_img1 from "../../../../assets/img/top_of_year/top_1.webp"
-import top_img2 from "../../../../assets/img/top_of_year/top_2.webp"
-import top_img3 from "../../../../assets/img/top_of_year/top_3.webp"
-import top_img4 from "../../../../assets/img/top_of_year/top_4.webp"
-import top_img5 from "../../../../assets/img/top_of_year/top_5.webp"
-import top_img6 from "../../../../assets/img/top_of_year/top_6.webp"
-import top_img7 from "../../../../assets/img/top_of_year/top_7.webp"
-import top_img8 from "../../../../assets/img/top_of_year/top_8.webp"
+import top_img1 from "../../../assets/img/top_of_year/top_1.webp"
+import top_img2 from "../../../assets/img/top_of_year/top_2.webp"
+import top_img3 from "../../../assets/img/top_of_year/top_3.webp"
+import top_img4 from "../../../assets/img/top_of_year/top_4.webp"
+import top_img5 from "../../../assets/img/top_of_year/top_5.webp"
+import top_img6 from "../../../assets/img/top_of_year/top_6.webp"
+import top_img7 from "../../../assets/img/top_of_year/top_7.webp"
+import top_img8 from "../../../assets/img/top_of_year/top_8.webp"
 
 
 

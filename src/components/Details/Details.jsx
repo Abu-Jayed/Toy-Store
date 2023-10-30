@@ -1,7 +1,7 @@
 import { toast } from "react-hot-toast";
 import { BsStarFill, BsStarHalf } from "react-icons/bs";
 import { useLoaderData } from "react-router-dom";
-import useTitle from "../Shared/hook/useTitle";
+import useTitle from "../../Shared/hook/useTitle";
 
 const Details = () => {
     useTitle('Toy Details')

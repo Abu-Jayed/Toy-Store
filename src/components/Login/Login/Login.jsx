@@ -3,9 +3,9 @@ import {  FaGoogle } from "react-icons/fa";
 import { Toaster, toast } from "react-hot-toast";
 import {  GoogleAuthProvider, getAuth, signInWithPopup } from "firebase/auth";
 import { useContext, useState } from "react";
-import { AuthContext } from "../../AuthProvider/AuthProvider";
 import app from "../../../firebase/firebase.config";
-import useTitle from "../../Shared/hook/useTitle";
+import useTitle from "../../../Shared/hook/useTitle";
+import { AuthContext } from "../../../context/AuthProvider/AuthProvider";
 
 const auth = getAuth(app)
 

@@ -1,7 +1,7 @@
 import { useForm } from "react-hook-form";
 import { useLoaderData, useNavigate } from "react-router-dom";
-import useTitle from "../Shared/hook/useTitle";
 import Swal from "sweetalert2";
+import useTitle from "../../Shared/hook/useTitle";
 
 const UpdateToy = (props) => {
   useTitle('Update Toy')

@@ -5,12 +5,12 @@ import { useContext } from "react";
 import { useState } from "react";
 import { useEffect } from "react";
 
-import { AuthContext } from "../AuthProvider/AuthProvider";
 import UpdateToy from "../UpdateToy/UpdateToy";
 import { Link, useNavigate } from "react-router-dom";
-import useTitle from "../Shared/hook/useTitle";
 import { Toaster, toast } from "react-hot-toast";
 import Swal from "sweetalert2";
+import { AuthContext } from "../../context/AuthProvider/AuthProvider";
+import useTitle from "../../Shared/hook/useTitle";
 
 const MyToys = () => {
   useTitle("My Toys");

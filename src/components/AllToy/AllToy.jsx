@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link, useLoaderData, useNavigate } from "react-router-dom";
-import useTitle from "../Shared/hook/useTitle";
 import Swal from "sweetalert2";
+import useTitle from "../../Shared/hook/useTitle";
 
 const AllToy = () => {
   useTitle('All Toy')

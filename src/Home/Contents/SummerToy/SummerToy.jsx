@@ -1,12 +1,12 @@
 import "react-awesome-slider/dist/styles.css";
-import out1 from "../../../../assets/img/out1.png";
-import out2 from "../../../../assets/img/out2.png";
-import out3 from "../../../../assets/img/out3.png";
-import out4 from "../../../../assets/img/out4.png";
-import out5 from "../../../../assets/img/out5.png";
-import out6 from "../../../../assets/img/out6.png";
-import out7 from "../../../../assets/img/out7.png";
-import out8 from "../../../../assets/img/out8.png";
+import out1 from "../../../assets/img/out1.png";
+import out2 from "../../../assets/img/out2.png";
+import out3 from "../../../assets/img/out3.png";
+import out4 from "../../../assets/img/out4.png";
+import out5 from "../../../assets/img/out5.png";
+import out6 from "../../../assets/img/out6.png";
+import out7 from "../../../assets/img/out7.png";
+import out8 from "../../../assets/img/out8.png";
 import AwesomeSlider from "react-awesome-slider";
 
 const SummerToy = () => {

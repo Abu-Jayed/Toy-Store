@@ -4,8 +4,8 @@ import { BsStarFill, BsStarHalf } from "react-icons/bs";
 import { Link, redirect, useNavigate } from "react-router-dom";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
-import { AuthContext } from "../../../AuthProvider/AuthProvider";
 import Swal from "sweetalert2";
+import { AuthContext } from "../../../context/AuthProvider/AuthProvider";
 
 const Category = () => {
   const [marvel, setMarvel] = useState([]);

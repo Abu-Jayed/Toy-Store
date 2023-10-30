@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
-import logo from "../../assets/Toy-Hero-Logo.jpeg";
+import logo from "../assets/Toy-Hero-Logo.jpeg"
 import { useContext, useState } from "react";
 import { toast } from "react-hot-toast";
-import { AuthContext } from "../AuthProvider/AuthProvider";
+import { AuthContext } from "../context/AuthProvider/AuthProvider";
 
 
 const NavigationBar = () => {

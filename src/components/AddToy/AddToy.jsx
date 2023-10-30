@@ -1,10 +1,10 @@
 /* eslint-disable no-unused-vars */
 import React, { useContext, useState } from "react";
 import { useForm } from "react-hook-form";
-import { AuthContext } from "../AuthProvider/AuthProvider";
-import useTitle from "../Shared/hook/useTitle";
 import { Toaster, toast } from "react-hot-toast";
 import Swal from "sweetalert2";
+import { AuthContext } from "../../context/AuthProvider/AuthProvider";
+import useTitle from "../../Shared/hook/useTitle";
 
 const AddToy = () => {
   useTitle("Add Toy");

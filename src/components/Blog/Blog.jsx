@@ -1,4 +1,4 @@
-import useTitle from "../Shared/hook/useTitle";
+import useTitle from "../../Shared/hook/useTitle";
 
 const Blog = () => {
   useTitle('Blog')

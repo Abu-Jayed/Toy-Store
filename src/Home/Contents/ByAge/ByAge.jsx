@@ -1,13 +1,13 @@
-import img1 from "../../../../assets/img/img1.png";
-import img2 from "../../../../assets/img/img2.png";
-import img3 from "../../../../assets/img/img3.png";
-import img4 from "../../../../assets/img/img4.png";
-import img5 from "../../../../assets/img/img5.png";
-import toy1 from "../../../../assets/img/toy1.png";
-import toy2 from "../../../../assets/img/toy2.png";
-import toy3 from "../../../../assets/img/toy3.png";
-import toy4 from "../../../../assets/img/toy4.png";
-import toy6 from "../../../../assets/img/toy6.png";
+import img1 from "../../../assets/img/img1.png";
+import img2 from "../../../assets/img/img2.png";
+import img3 from "../../../assets/img/img3.png";
+import img4 from "../../../assets/img/img4.png";
+import img5 from "../../../assets/img/img5.png";
+import toy1 from "../../../assets/img/toy1.png";
+import toy2 from "../../../assets/img/toy2.png";
+import toy3 from "../../../assets/img/toy3.png";
+import toy4 from "../../../assets/img/toy4.png";
+import toy6 from "../../../assets/img/toy6.png";
 
 const ByAge = () => {
   return (

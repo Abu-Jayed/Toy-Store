@@ -1,4 +1,4 @@
-import logo from "../../assets/Toy-Hero-Logo.jpeg";
+import logo from "../assets/Toy-Hero-Logo.jpeg";
 
 const Footer = () => {
   return (

@@ -1,16 +1,16 @@
 import { createBrowserRouter } from "react-router-dom";
 import Layout from "../Layout/Layout";
 import Home from "../Home/Home/Home";
-import Login from "../Login/Login/Login";
-import Register from "../Login/Register/Register";
-import AllToy from "../AllToy/AllToy";
-import Details from "../Details/Details";
-import MyToys from "../MyToys/MyToys";
-import UpdateToy from "../UpdateToy/UpdateToy";
-import Blog from "../Blog/Blog";
+import Login from "../components/Login/Login/Login";
+import Register from "../components/Login/Register/Register";
+import AllToy from "../components/AllToy/AllToy";
+import Details from "../components/Details/Details";
+import MyToys from "../components/MyToys/MyToys";
+import UpdateToy from "../components/UpdateToy/UpdateToy";
+import Blog from "../components/Blog/Blog";
 import ErrorPage from "../Shared/ErrorPage";
 import PrivetRoute from "./PrivetRoute";
-import AddToy from "../AddToy/AddToy";
+import AddToy from "../components/AddToy/AddToy";
 
 const router = createBrowserRouter([
   {

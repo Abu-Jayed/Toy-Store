@@ -1,4 +1,4 @@
-import owener from "../../../assets/img/owener.jpg";
+import owener from "../../assets/img/owener.jpg";
 import './Home.css'
 import { Toaster } from "react-hot-toast";
 import Category from "../Contents/Category/Category";
