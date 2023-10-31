@@ -11,7 +11,14 @@ const Discount = () => {
     <>
       <Swiper
         className="mt-2 "
-        slidesPerView={2}
+        breakpoints={{
+          '500':{
+            slidesPerView: 1,
+          },
+          '700':{
+            slidesPerView: 2,
+          },
+        }}
         navigation={true}
         modules={[Navigation]}
         loop
