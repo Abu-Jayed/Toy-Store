@@ -19,10 +19,8 @@ const ByAge = () => {
         shop by age
       </p>
 
-
-
-    {/* 2nd floor start */}
-    <div className="ml-32 md:ml-0 mt-9 py-1 rounded-3xl  md:flex md:gap-5 justify-center">
+      {/* 2nd floor start */}
+      <div className="ml-32 md:ml-0 mt-9 py-1 rounded-3xl  md:flex md:gap-5 justify-center">
         <div className=" bg-rose-400 border shadow-lg mb-6 w-48 h-60 rounded-xl flex justify-center ">
           <div className="mt-3">
             <img className="rounded-xl w-[167px] h-[157]" src={toy1} alt="" />
@@ -66,13 +64,15 @@ const ByAge = () => {
       </div>
       {/* 2nd floor end */}
 
-
-
       {/* 1st floor start */}
       <div className=" ml-32 md:ml-0 md:absolute md:top-0 md:left-[117px] md:py-10 md:rounded-3xl  md:flex md:gap-5 md:justify-center absolute top-[85px]">
         <div className="hover:opacity-0 duration-500  bg-rose-600  w-48 h-60 rounded-xl flex justify-center ">
           <div className="mt-3">
-            <img className="rounded-xl w-[167px] h-[157]" src={img1} alt="" />
+            <img
+              className="hover:cursor-pointer rounded-xl w-[167px] h-[157]"
+              src={img1}
+              alt=""
+            />
             <p className="text-white font-bold text-2xl text-center my-3">
               0-2 years
             </p>
@@ -80,7 +80,11 @@ const ByAge = () => {
         </div>
         <div className="bg-rose-600 hover:opacity-0 duration-500  w-48 h-60 rounded-xl flex justify-center mt-4 md:mt-0">
           <div className="mt-3">
-            <img className="rounded-xl w-[167px] h-[157]" src={img2} alt="" />
+            <img
+              className="hover:cursor-pointer rounded-xl w-[167px] h-[157]"
+              src={img2}
+              alt=""
+            />
             <p className="text-white font-bold text-2xl text-center my-3">
               3-4 years
             </p>
@@ -88,7 +92,11 @@ const ByAge = () => {
         </div>
         <div className="hover:opacity-0 duration-500 bg-rose-600  w-48 h-60 rounded-xl flex justify-center mt-4 md:mt-0">
           <div className="mt-3">
-            <img className="rounded-xl w-[167px] h-[157]" src={img3} alt="" />
+            <img
+              className="hover:cursor-pointer rounded-xl w-[167px] h-[157]"
+              src={img3}
+              alt=""
+            />
             <p className="text-white font-bold text-2xl text-center my-3">
               5-7 years
             </p>
@@ -96,7 +104,11 @@ const ByAge = () => {
         </div>
         <div className="hover:opacity-0 duration-500 bg-rose-600  w-48 h-60 rounded-xl flex justify-center mt-4 md:mt-0">
           <div className="mt-3">
-            <img className="rounded-xl w-[167px] h-[157]" src={img4} alt="" />
+            <img
+              className="hover:cursor-pointer rounded-xl w-[167px] h-[157]"
+              src={img4}
+              alt=""
+            />
             <p className="text-white font-bold text-2xl text-center my-3">
               8-10 years
             </p>
@@ -104,7 +116,11 @@ const ByAge = () => {
         </div>
         <div className="hover:opacity-0 duration-500 bg-rose-600  w-48 h-60 rounded-xl flex justify-center mt-4 md:mt-0">
           <div className="mt-3">
-            <img className="rounded-xl w-[167px] h-[157]" src={img5} alt="" />
+            <img
+              className="hover:cursor-pointer rounded-xl w-[167px] h-[157]"
+              src={img5}
+              alt=""
+            />
             <p className="text-white font-bold text-2xl text-center my-3">
               10+ years
             </p>
@@ -112,8 +128,6 @@ const ByAge = () => {
         </div>
       </div>
       {/* 1st floor end */}
-
-      
     </div>
   );
 };

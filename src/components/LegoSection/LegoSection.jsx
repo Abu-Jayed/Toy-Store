@@ -1,10 +1,10 @@
 import img1 from "../../assets/LegoSection/img1.webp";
 import img2 from "../../assets/LegoSection/img2.webp";
 import img3 from "../../assets/LegoSection/img3.webp";
-import simg1 from "../../assets/LegoSection/simg1.webp"
-import simg2 from "../../assets/LegoSection/simg2.webp"
-import simg3 from "../../assets/LegoSection/simg3.webp"
-import simg4 from "../../assets/LegoSection/simg4.webp"
+import simg1 from "../../assets/LegoSection/simg1.webp";
+import simg2 from "../../assets/LegoSection/simg2.webp";
+import simg3 from "../../assets/LegoSection/simg3.webp";
+import simg4 from "../../assets/LegoSection/simg4.webp";
 import Button from "../Button/Button";
 
 const LegoSection = () => {

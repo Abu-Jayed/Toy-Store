@@ -25,9 +25,9 @@ const Home = () => {
       <Slider></Slider>
       <HeroHeading></HeroHeading>
       <LegoSection></LegoSection>
+      <ByAge></ByAge>
       <Gallery></Gallery>
       <Category></Category>
-      <ByAge></ByAge>
       <ByCategory></ByCategory>
       <ByBrand></ByBrand>
       <FavouriteCategory></FavouriteCategory>
