@@ -1,125 +1,75 @@
-import { GrDeliver, GrFacebook, GrShop } from "react-icons/gr";
-import { CgShoppingCart } from "react-icons/cg";
+import "swiper/css";
+import "swiper/css/navigation";
+import { Navigation } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
+import klarna from "../../../assets/KLarna_logo.webp";
+import car from "../../../assets/discount/Webp.net-resizeimage_1_.webp"
+import whaticon from "../../../assets/discount/what-icon.webp"
 
 const Discount = () => {
   return (
-    <div>
-      {/* discount offer carousel start */}
-      <div className="carousel w-full mt-2">
-        {/* slider 1 start */}
-        <div id="slide1" className="carousel-item relative bg-gray-200  w-full">
-          {/* <img
-            src="/images/stock/photo-1625726411847-8cbb60cc71e6.jpg"
-            className="w-full"
-          /> */}
-          <div className="flex gap-20 items-center  mx-3 md:px-0 px-12 h-20 md:mx-auto">
-            <div>
-              <div className=" w-96 flex gap-5 items-center">
-              <h2><span className="text-lg md:font-bold">Find any toy</span> <br /> <span className="md:font-bold text-red-700 text-2xl">SHOP NOW</span> </h2>
-                <CgShoppingCart className="text-red-700 w-10 h-10"></CgShoppingCart>
-                
+    <>
+      <Swiper
+        className="mt-2 "
+        slidesPerView={2}
+        navigation={true}
+        modules={[Navigation]}
+        loop
+      >
+        <SwiperSlide className="hover:cursor-pointer bg-[#f3f3f3]  py-2  text-center font-medium">
+          <div className="flex justify-center">
+            <div className="flex h-[55px] items-center justify-around w-[340px]  ">
+              <div>
+                <img className="w-16" src={klarna} alt="Klarna logo" />
               </div>
-            </div>
-            <div>
-              <div className=" md:gap-10 flex items-center">
-                
-                <h2 className="md:font-bold text-xl">Free standard delievery on order <br /> <span className="md:ml-32 md:text-4xl text-orange-500">$43</span> </h2>
-                <GrDeliver className="text-red-700 w-10 h-10"></GrDeliver>
+              <div className="font-bold text-[18px]">
+                <h1>Play with Klarna</h1>
+                <p>Shop Now</p>
               </div>
             </div>
           </div>
-          <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-            <a href="#slide3" className="btn btn-circle">
-              ❮
-            </a>
-            <a href="#slide2" className="btn btn-circle">
-              ❯
-            </a>
-          </div>
-        </div>
-        {/* slider 1 end */}
-
-        {/* slider 2 start */}
-
-        <div id="slide2" className="carousel-item relative bg-gray-200 w-full">
-          <div className="flex gap-20 items-center h-20 md:px-0 px-10 md:mx-auto">
-            
-            <div>
-              <div className=" md:gap-10 flex items-center">
-                
-                <h2 className="md:font-bold text-xl">Free standard delievery on order <br /> <span className="md:ml-32 md:text-4xl text-orange-500">$43</span> </h2>
-                <GrShop className="text-red-700 w-10 h-10"></GrShop>
+        </SwiperSlide>
+        <SwiperSlide className="hover:cursor-pointer bg-[#f3f3f3]  py-2 text-center font-medium">
+          <div className="flex justify-center">
+            <div className="flex h-[55px] items-center justify-around w-[350px]  ">
+              <div>
+                <img className="w-16" src={car} alt="Klarna logo" />
               </div>
-            </div>
-            <div>
-              <div className=" md:gap-10 flex items-center md:w-52 w-60">
-                <div className="text-center">
-
-                <h2 className=" md:font-bold md:text-lg">Recive your delievery from <br /> more than 1500 store<br /> <span className=" md:text-xl text-orange-500 ">Shop Now</span> </h2>
-                </div>
-
-                <GrDeliver className="text-red-700 w-16 h-16"></GrDeliver>
+              <div className="font-bold text-[18px]">
+                <h1>Free Standard Delivery On Orders</h1>
+                <p>Over $20</p>
               </div>
             </div>
           </div>
-          <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-            <a href="#slide1" className="btn btn-circle">
-              ❮
-            </a>
-            <a href="#slide3" className="btn btn-circle">
-              ❯
-            </a>
-          </div>
-        </div>
-        {/* slider 2 end */}
-
-        {/* slider 3 start */}
-
-        <div id="slide3" className="carousel-item relative bg-gray-200 w-full">
-          {/* <img
-            src="/images/stock/photo-1414694762283-acccc27bca85.jpg"
-            className="w-full"
-          /> */}
-          <div className="flex gap-20 items-center h-20 mx-auto">
-            
-            
-            <div>
-              <div className=" md:gap-10 flex items-center">
-                <div className="text-center">
-
-                <h2 className=" md:font-bold text-lg">Recive your delievery from <br /> more than 1500 store<br /> <span className=" md:text-xl text-orange-500 ">Shop Now</span> </h2>
-                </div>
-                <CgShoppingCart className="text-red-700 w-10 h-10"></CgShoppingCart>
+        </SwiperSlide>
+        <SwiperSlide className="hover:cursor-pointer bg-[#f3f3f3]  py-2 text-center font-medium">
+          <div className="flex justify-center">
+            <div className="flex h-[55px] items-center justify-around w-[350px]  ">
+              <div>
+                <img className="w-16" src={car} alt="Klarna logo" />
               </div>
-            </div>
-            <div>
-              <div className=" md:gap-10 flex items-center">
-                <div className="text-center">
-
-                <h2 className=" md:font-bold text-lg">Need help finding any toy?  Explore our<br /> <span className=" md:text-xl text-orange-500 ">Facebook Group</span> </h2>
-                </div>
-                <GrFacebook className="text-orange-700 w-10 h-10"></GrFacebook>
+              <div className="font-bold text-[18px]">
+                <h1>Recive your delivery in more than</h1>
+                <p>2000 Parcel shop Location</p>
               </div>
             </div>
           </div>
-          <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-            <a href="#slide2" className="btn btn-circle">
-              ❮
-            </a>
-            <a href="#slide1" className="btn btn-circle">
-              ❯
-            </a>
+        </SwiperSlide>
+        {/* slide 4 */}
+        <SwiperSlide className="hover:cursor-pointer bg-[#f3f3f3]  py-2 text-center font-medium">
+          <div className="flex justify-center">
+            <div className="flex h-[55px] items-center justify-around w-[350px]  ">
+              <div>
+                <img className="w-16" src={whaticon} alt="Klarna logo" />
+              </div>
+              <div className="font-bold text-[18px]">
+                <h1>Need help finding our toy? Explore our</h1>
+              </div>
+            </div>
           </div>
-        </div>
-        {/* slider 3 end */}
-
-        {/* slider 4 start */}
-
-        
-        {/* slider 4 end */}
-      </div>
-      {/* discount offer carousel end */}
-    </div>
+        </SwiperSlide>
+      </Swiper>
+    </>
   );
 };
 
