@@ -14,6 +14,7 @@ import FavouriteCategory from "../Contents/FaveriteCategory/FavouriteCategory";
 import BestOfYear from "../Contents/BestOfYear/BestOfYear";
 import SummerToy from "../Contents/SummerToy/SummerToy";
 import HeroHeading from "../../components/HeroHeading/HeroHeading";
+import LegoSection from "../../components/LegoSection/LegoSection";
 
 const Home = () => {
   useTitle("Home");
@@ -23,6 +24,7 @@ const Home = () => {
       <Discount></Discount>
       <Slider></Slider>
       <HeroHeading></HeroHeading>
+      <LegoSection></LegoSection>
       <Gallery></Gallery>
       <Category></Category>
       <ByAge></ByAge>
