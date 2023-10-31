@@ -13,6 +13,7 @@ import ByBestSelling from "../Contents/ByCharacter/ByBestSelling";
 import FavouriteCategory from "../Contents/FaveriteCategory/FavouriteCategory";
 import BestOfYear from "../Contents/BestOfYear/BestOfYear";
 import SummerToy from "../Contents/SummerToy/SummerToy";
+import HeroHeading from "../../components/HeroHeading/HeroHeading";
 
 const Home = () => {
   useTitle("Home");
@@ -21,6 +22,7 @@ const Home = () => {
       <Toaster />
       <Discount></Discount>
       <Slider></Slider>
+      <HeroHeading></HeroHeading>
       <Gallery></Gallery>
       <Category></Category>
       <ByAge></ByAge>

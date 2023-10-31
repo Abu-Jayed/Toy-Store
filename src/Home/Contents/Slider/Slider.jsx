@@ -16,7 +16,7 @@ const Slider = () => {
             navigation
             loop
             modules={[Navigation]}
-            className="sm:max-w-[1320px] rounded-sm md:mt-10 relative "
+            className="sm:max-w-[1320px] cursor-grab rounded-sm md:mt-10 relative "
           >
             <SwiperSlide>
               <div>
