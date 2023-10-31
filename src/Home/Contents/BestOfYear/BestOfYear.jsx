@@ -84,6 +84,7 @@ const toy = [
 
 
 const BestOfYear = () => {
+
   return (
     <div className='flex items-center justify-center mx-auto '>
 
@@ -144,7 +145,7 @@ const BestOfYear = () => {
 
         {
           toy.map((toy, i) => {
-            return <div key={i} className='text-black w-[275px] '>
+            return <div key={i}  className='mt-10 mb-14  hover:shadow-xl hover:shadow-rose-300 text-black w-[275px] border rounded-[22px]'>
               <div className='border- h-[570px] border-amber-500 '>
                 <div className='h-20  border4 border-red-600'>
                   <div className='py-5  text-center'>
