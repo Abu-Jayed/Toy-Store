@@ -31,7 +31,7 @@ const Home = () => {
       <Gallery></Gallery>
       <Category></Category>
       <ByCategory></ByCategory>
-      <ByBrand></ByBrand>
+      {/* <ByBrand></ByBrand> */}
       <FavouriteCategory></FavouriteCategory>
       <TopTen></TopTen>
       <FavouriteBrand></FavouriteBrand>
