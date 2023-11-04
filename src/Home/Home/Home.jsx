@@ -37,12 +37,12 @@ const Home = () => {
       <TopTen></TopTen>
       <FavouriteBrand></FavouriteBrand>
       <LegoStore></LegoStore>
+      <BestOfYear></BestOfYear>
       <div className="divBg">
         <div>
           <ByBestSelling></ByBestSelling>
         </div>
       </div>
-      <BestOfYear></BestOfYear>
       <SummerToy></SummerToy>
       <div className='grid md:grid-cols-2 mt-20'>
         <div className=' mx-auto'>
