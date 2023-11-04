@@ -17,6 +17,7 @@ import HeroHeading from "../../components/HeroHeading/HeroHeading";
 import LegoSection from "../../components/LegoSection/LegoSection";
 import TopTen from "../../components/TopTen/TopTen";
 import FavouriteBrand from "../../components/FavouriteBrand/FavouriteBrand";
+import LegoStore from "../../components/LegoStore/LegoStore";
 
 const Home = () => {
   useTitle("Home");
@@ -35,6 +36,7 @@ const Home = () => {
       <FavouriteCategory></FavouriteCategory>
       <TopTen></TopTen>
       <FavouriteBrand></FavouriteBrand>
+      <LegoStore></LegoStore>
       <div className="divBg">
         <div>
           <ByBestSelling></ByBestSelling>
